@@ -149,7 +149,7 @@ function TeamMemberCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
     >
-      <Card className="group overflow-hidden border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
+      <Card className="group h-full overflow-hidden border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
             {/* Avatar */}
@@ -165,7 +165,7 @@ function TeamMemberCard({
 
             {/* Info */}
             <div className="min-w-0 flex-1">
-              <h4 className="truncate text-lg font-semibold text-white transition-colors group-hover:text-[#E5005B]">
+              <h4 className="text-lg font-semibold text-white transition-colors group-hover:text-[#E5005B]">
                 {member.name}
               </h4>
               <p className="text-sm font-medium text-[#E5005B]">{member.role}</p>
