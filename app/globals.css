@@ -1,17 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
-
-/* HAN Pink Color: Using a softer, friendlier pink that blends well */
-/* Primary: #E5005B (soft HAN pink) */
-/* Secondary accent: #9B7ED9 (soft purple for variety) */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -41,76 +37,61 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
-  /* Custom HCR colors - softer HAN Pink theme */
-  --color-hcr-pink: #E5005B;
-  --color-hcr-pink-soft: #FF6B9A;
-  --color-hcr-pink-dark: #B8004F;
-  --color-hcr-purple: #9B7ED9;
-  --color-hcr-dark: #121212;
-  --color-hcr-gray: #1E1E1E;
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-5xl: calc(var(--radius) + 20px);
+  --radius-6xl: calc(var(--radius) + 24px);
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
 }
 
 :root {
-  --background: #121212;
-  --foreground: #F5F5F5;
-  --card: #1A1A1A;
-  --card-foreground: #F5F5F5;
-  --popover: #1A1A1A;
-  --popover-foreground: #F5F5F5;
+  --radius: 0.625rem;
+  --background: #0a0a0a;
+  --foreground: #f8fafc;
+  --card: #141414;
+  --card-foreground: #f8fafc;
+  --popover: #141414;
+  --popover-foreground: #f8fafc;
   --primary: #E5005B;
-  --primary-foreground: #FFFFFF;
-  --secondary: #1E1E1E;
-  --secondary-foreground: #F5F5F5;
-  --muted: #262626;
-  --muted-foreground: #A3A3A3;
-  --accent: #262626;
-  --accent-foreground: #F5F5F5;
+  --primary-foreground: #ffffff;
+  --secondary: #1A1A1A;
+  --secondary-foreground: #f8fafc;
+  --muted: #1E1E1E;
+  --muted-foreground: #a1a1aa;
+  --accent: #E5005B;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --border: rgba(255, 255, 255, 0.08);
-  --input: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
   --ring: #E5005B;
   --chart-1: #E5005B;
-  --chart-2: #9B7ED9;
-  --chart-3: #FF6B9A;
-  --chart-4: #7EC8E8;
-  --chart-5: #E8B57E;
-  --radius: 0.75rem;
-  --sidebar: #121212;
-  --sidebar-foreground: #F5F5F5;
+  --chart-2: #FF6B9A;
+  --chart-3: #9B7ED9;
+  --chart-4: #06b6d4;
+  --chart-5: #f59e0b;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #f8fafc;
   --sidebar-primary: #E5005B;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #1E1E1E;
-  --sidebar-accent-foreground: #F5F5F5;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1A1A1A;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
   --sidebar-ring: #E5005B;
-}
-
-.dark {
-  --background: #121212;
-  --foreground: #F5F5F5;
-  --card: #1A1A1A;
-  --card-foreground: #F5F5F5;
-  --popover: #1A1A1A;
-  --popover-foreground: #F5F5F5;
-  --primary: #E5005B;
-  --primary-foreground: #FFFFFF;
-  --secondary: #1E1E1E;
-  --secondary-foreground: #F5F5F5;
-  --muted: #262626;
-  --muted-foreground: #A3A3A3;
-  --accent: #262626;
-  --accent-foreground: #F5F5F5;
-  --destructive: #ef4444;
-  --border: rgba(255, 255, 255, 0.08);
-  --input: rgba(255, 255, 255, 0.12);
-  --ring: #E5005B;
 }
 
 @layer base {
@@ -120,10 +101,12 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
   }
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
 }
 
@@ -143,69 +126,62 @@
     background-image: 
       linear-gradient(rgba(232, 93, 154, 0.025) 1px, transparent 1px),
       linear-gradient(90deg, rgba(232, 93, 154, 0.025) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-size: 40px 40px;
   }
   
   .bg-grid-pattern-light {
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(rgba(232, 93, 154, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 93, 154, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
   
-  .glow-pink {
-    box-shadow: 0 0 40px rgba(232, 93, 154, 0.12);
+  /* Scroll performance optimizations */
+  .scroll-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
   }
   
-  .glow-purple {
-    box-shadow: 0 0 40px rgba(155, 126, 217, 0.12);
+  /* GPU acceleration for animated elements */
+  .gpu-accelerated {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  
+  /* Optimize blur effects during scroll */
+  .blur-glow {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
 
-/* Animation keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Smooth scrolling optimization */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(232, 93, 154, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(232, 93, 154, 0.25);
+  
+  /* Enable momentum scrolling on iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  50% {
-    transform: translateY(-8px);
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-}
-
-/* Technical grid background - softer */
-.technical-grid {
-  position: relative;
-}
-
-.technical-grid::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(232, 93, 154, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232, 93, 154, 0.015) 1px, transparent 1px);
-  background-size: 80px 80px;
-  pointer-events: none;
 }
 
 /* Selection color - softer pink */
@@ -214,13 +190,14 @@
   color: #ffffff;
 }
 
-/* Smoother scroll */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Focus styles - softer */
 *:focus-visible {
   outline: 2px solid rgba(232, 93, 154, 0.5);
   outline-offset: 2px;
+}
+
+/* Prevent layout shifts */
+img, video {
+  height: auto;
+  max-width: 100%;
 }

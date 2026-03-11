@@ -246,7 +246,7 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section className="relative py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px]" />
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px] blur-glow" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div

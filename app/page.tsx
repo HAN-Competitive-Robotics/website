@@ -83,7 +83,7 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-1/4 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[150px]" />
+        <div className="absolute top-1/4 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[150px] blur-glow" />
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#E5005B]/5 rounded-full blur-[100px]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
