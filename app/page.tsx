@@ -30,6 +30,12 @@ const divisions = [
       "CAD design, structural analysis, and precision manufacturing of robot chassis and weapon systems.",
   },
   {
+    icon: Zap,
+    title: "Electrical Engineering",
+    description:
+      "Power distribution, motor control, wiring harnesses, and electrical safety systems.",
+  },
+  {
     icon: Cpu,
     title: "Embedded Systems",
     description:
@@ -68,12 +74,13 @@ const updates = [
 ];
 
 const sponsors = [
-  { name: "HAN University", tier: "Platinum", logo: "/sponsors/han-platinum.png" },
-  { name: "Gold Sponsor 1", tier: "Gold", logo: "/sponsors/gold-1.png" },
-  { name: "Gold Sponsor 2", tier: "Gold", logo: "/sponsors/gold-2.png" },
-  { name: "Silver 1", tier: "Silver", logo: "/sponsors/silver-1.png" },
-  { name: "Silver 2", tier: "Silver", logo: "/sponsors/silver-2.png" },
-  { name: "Supporter 1", tier: "Supporter", logo: "/sponsors/supporter-1.png" },
+  { name: "HAN University", tier: "Platinum", logo: "/sponsors/han-platinum.svg" },
+  // Placeholders for future sponsors:
+  // { name: "Gold Sponsor 1", tier: "Gold", logo: "" },
+  // { name: "Gold Sponsor 2", tier: "Gold", logo: "" },
+  // { name: "Silver Sponsor 1", tier: "Silver", logo: "" },
+  // { name: "Silver Sponsor 2", tier: "Silver", logo: "" },
+  // { name: "Supporter 1", tier: "Supporter", logo: "" },
 ];
 
 export default function HomePage() {
@@ -273,7 +280,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: "Combat Robots",
