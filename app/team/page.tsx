@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Users, Zap, Wrench, Cpu, Settings, ArrowRight } from "lucide-react";
+import { Users, Wrench, Cpu, Settings, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -98,10 +98,10 @@ const teamSections = [
     ],
   },
   {
-    id: "electrical",
-    title: "Electrical Engineering",
-    icon: Zap,
-    description: "Wiring looms and electrical systems",
+    id: "electrical-embedded",
+    title: "Electrical & Embedded Systems",
+    icon: Cpu,
+    description: "Power distribution, control systems, firmware, and RF",
     members: [
       {
         name: "Jits Kamps",
@@ -110,14 +110,6 @@ const teamSections = [
         image: "/team/jits.png",
         initials: "JK",
       },
-    ],
-  },
-  {
-    id: "embedded",
-    title: "Embedded Systems",
-    icon: Cpu,
-    description: "Developing control systems, firmware, and RF systems",
-    members: [
       {
         name: "Neiv Malaviya",
         role: "Data Logging & Visualization",
@@ -127,7 +119,7 @@ const teamSections = [
       },
       {
         name: "Luka Ponomarenko",
-        role: "Core & Weapon Firmware",
+        role: "Core & Kinetic Firmware",
         program: "Segmentation fault? I hardly know her",
         image: "/team/luka.png",
         initials: "LP",
