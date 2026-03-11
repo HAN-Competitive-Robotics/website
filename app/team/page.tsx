@@ -277,12 +277,21 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Team Sections */}
+      {/* Team Sections - Custom Layout */}
       <section className="bg-[#121212] py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {teamSections.map((section, index) => (
-            <TeamSection key={section.id} section={section} index={index} />
-          ))}
+          {/* Management - Centered at top */}
+          <div className="mb-12 flex justify-center">
+            <div className="w-full max-w-2xl">
+              <TeamSection section={teamSections[0]} index={0} />
+            </div>
+          </div>
+
+          {/* Mechanical & Electrical/Embedded - Side by side */}
+          <div className="grid gap-8 lg:grid-cols-2">
+            <TeamSection section={teamSections[1]} index={1} />
+            <TeamSection section={teamSections[2]} index={2} />
+          </div>
         </div>
       </section>
 
