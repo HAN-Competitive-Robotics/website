@@ -190,7 +190,7 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
       className="h-full py-10 first:pt-0"
       id={section.id}
     >
-      <div className="mb-8 min-h-[120px]">
+      <div className="mb-8">
         <div className="mb-3 flex items-center gap-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#E5005B]/10">
             <Icon className="h-5 w-5 text-[#E5005B]" />
@@ -288,7 +288,7 @@ export default function TeamPage() {
           </div>
 
           {/* Mechanical & Electrical/Embedded - Side by side */}
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid items-start gap-8 lg:grid-cols-2">
             <TeamSection section={teamSections[1]} index={1} />
             <TeamSection section={teamSections[2]} index={2} />
           </div>
