@@ -187,17 +187,17 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="py-10 first:pt-0"
+      className="h-full py-10 first:pt-0"
       id={section.id}
     >
-      <div className="mb-8">
+      <div className="mb-8 min-h-[120px]">
         <div className="mb-3 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#E5005B]/10">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#E5005B]/10">
             <Icon className="h-5 w-5 text-[#E5005B]" />
           </div>
           <h2 className="text-2xl font-bold text-white sm:text-3xl">{section.title}</h2>
         </div>
-        <p className="ml-13 pl-13 text-white/60">{section.description}</p>
+        <p className="text-white/60">{section.description}</p>
       </div>
 
       <div className="grid items-stretch gap-4 grid-cols-1 sm:grid-cols-2">
