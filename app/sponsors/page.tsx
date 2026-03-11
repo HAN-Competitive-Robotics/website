@@ -120,7 +120,6 @@ export default function SponsorsPage() {
         <div className="blur-glow absolute top-0 left-1/2 h-1/2 w-full -translate-x-1/2 rounded-full bg-[#E5005B]/10 blur-[200px]" />
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
