@@ -110,13 +110,6 @@ const teamSections = [
         image: "/team/jits.png",
         initials: "JK",
       },
-      {
-        name: "Mohammed Dude",
-        role: "Electrical Engineer",
-        program: "It's not a bug, it's a feature",
-        image: "/team/mohammed.png",
-        initials: "MD",
-      },
     ],
   },
   {

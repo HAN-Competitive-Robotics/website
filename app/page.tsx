@@ -165,7 +165,7 @@ export default function HomePage() {
                 <div className="mt-1 text-sm text-white/50">kg Weight Class</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white sm:text-4xl">11</div>
+                <div className="text-3xl font-bold text-white sm:text-4xl">10</div>
                 <div className="mt-1 text-sm text-white/50">Team Members</div>
               </div>
               <div>
