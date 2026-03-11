@@ -40,7 +40,7 @@ const teamSections = [
       {
         name: "Neiv Malaviya",
         role: "Technical Manager",
-        program: "If it works, do not touch it",
+        program: "If it works, don't touch it",
         image: "/team/neiv.png",
         initials: "NM",
       },
@@ -112,7 +112,7 @@ const teamSections = [
       {
         name: "Neiv Malaviya",
         role: "Data Logging & Visualization",
-        program: "Print debugging enthusiast",
+        program: "printf debugging enthusiast",
         image: "/team/neiv.png",
         initials: "NM",
       },
