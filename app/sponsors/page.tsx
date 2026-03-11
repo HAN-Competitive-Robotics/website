@@ -334,7 +334,7 @@ export default function SponsorsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-12"
           >
             <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
               Our Partners
@@ -342,7 +342,7 @@ export default function SponsorsPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Current <span className="text-gradient">Sponsors</span>
             </h2>
-            <p className="text-white/60 text-lg">
+            <p className="text-white/60">
               We&apos;re grateful to these organizations for supporting HCR and
               making our engineering journey possible.
             </p>
@@ -354,57 +354,59 @@ export default function SponsorsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12"
+            className="mb-10"
           >
-            <div className="text-center mb-6">
-              <Badge className="bg-purple-500/10 text-purple-400 border-purple-500/30">
-                <Sparkles className="w-3 h-3 mr-1" />
-                Platinum Sponsor
-              </Badge>
-            </div>
-            <div className="max-w-md mx-auto">
-              <div className="aspect-[3/1] rounded-2xl overflow-hidden border border-purple-500/30 bg-[#1A1A1A]">
-                <img 
-                  src={currentSponsors[0].logo}
-                  alt="HAN University"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            <Card className="max-w-xl mx-auto bg-gradient-to-br from-purple-500/10 via-[#141414] to-[#141414] border-purple-500/30">
+              <CardContent className="p-8 flex items-center gap-6">
+                <div className="w-16 h-16 rounded-xl bg-purple-500/20 flex items-center justify-center shrink-0">
+                  <Sparkles className="w-8 h-8 text-purple-400" />
+                </div>
+                <div>
+                  <Badge className="mb-2 bg-purple-500/10 text-purple-400 border-purple-500/30">
+                    Platinum Sponsor
+                  </Badge>
+                  <h3 className="text-xl font-bold text-white">HAN University of Applied Sciences</h3>
+                  <p className="text-white/50 text-sm mt-1">Official educational partner</p>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
 
-          {/* Other Sponsors Grid */}
+          {/* Sponsor Tiers Summary */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto"
           >
-            {currentSponsors.slice(1).map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="aspect-[3/2] bg-[#1A1A1A] rounded-xl border border-white/10 flex flex-col items-center justify-center hover:border-white/20 transition-colors group overflow-hidden p-4"
-              >
-                <img 
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="w-full h-3/4 object-cover rounded-lg opacity-80 group-hover:opacity-100 transition-opacity mb-2"
-                />
-                <Badge
-                  variant="outline"
-                  className={`text-xs ${
-                    sponsor.tier === "Gold"
-                      ? "border-yellow-500/30 text-yellow-500"
-                      : sponsor.tier === "Silver"
-                      ? "border-gray-500/30 text-gray-400"
-                      : "border-[#E5005B]/30 text-[#E5005B]"
-                  }`}
-                >
-                  {sponsor.tier}
-                </Badge>
-              </div>
-            ))}
+            <Card className="bg-[#141414] border-yellow-500/20">
+              <CardContent className="p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <Medal className="w-5 h-5 text-yellow-500" />
+                  <span className="font-semibold text-white">Gold</span>
+                </div>
+                <p className="text-white/50 text-sm">2 sponsors</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#141414] border-gray-500/20">
+              <CardContent className="p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <Star className="w-5 h-5 text-gray-400" />
+                  <span className="font-semibold text-white">Silver</span>
+                </div>
+                <p className="text-white/50 text-sm">3 sponsors</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#141414] border-[#E5005B]/20">
+              <CardContent className="p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <Zap className="w-5 h-5 text-[#E5005B]" />
+                  <span className="font-semibold text-white">Supporters</span>
+                </div>
+                <p className="text-white/50 text-sm">2 supporters</p>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </section>
