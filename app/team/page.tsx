@@ -200,7 +200,7 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
         <p className="ml-13 pl-13 text-white/60">{section.description}</p>
       </div>
 
-      <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid items-stretch gap-4 grid-cols-1 sm:grid-cols-2">
         {section.members.map((member, memberIndex) => (
           <TeamMemberCard key={member.name} member={member} index={memberIndex} />
         ))}
@@ -282,7 +282,7 @@ export default function TeamPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Management - Centered at top */}
           <div className="mb-12 flex justify-center">
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-4xl">
               <TeamSection section={teamSections[0]} index={0} />
             </div>
           </div>
