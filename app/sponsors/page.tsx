@@ -204,7 +204,7 @@ export default function SponsorsPage() {
       </section>
 
       {/* Why Sponsor Section */}
-      <section className="bg-[#0f0f0f] py-16">
+      <section className="bg-[#0f0f0f] py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
