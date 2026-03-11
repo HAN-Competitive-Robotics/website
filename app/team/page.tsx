@@ -21,7 +21,6 @@ const staggerContainer = {
   },
 };
 
-// Random avatar placeholder URLs
 // Team data structure - easy to edit
 // Add or modify team members here
 const teamSections = [
@@ -41,7 +40,7 @@ const teamSections = [
       {
         name: "Neiv Malaviya",
         role: "Technical Manager",
-        program: "If it works, don't touch it",
+        program: "If it works, do not touch it",
         image: "/team/neiv.png",
         initials: "NM",
       },
@@ -51,7 +50,7 @@ const teamSections = [
     id: "mechanical",
     title: "Mechanical Engineering",
     icon: Wrench,
-    description: "Designing and manufacturing the robot chassis, drive train, and weapons",
+    description: "Designing and manufacturing the robot chassis, drive train, and active elements",
     members: [
       {
         name: "Rafiul Islam",
@@ -62,7 +61,7 @@ const teamSections = [
       },
       {
         name: "Vishaal Girish Gopala Krishnan",
-        role: "Drive Train",
+        role: "Drive Train Team",
         program: "Making things spin since day one",
         image: "/team/vishaal.png",
         initials: "VG",
@@ -83,14 +82,14 @@ const teamSections = [
       },
       {
         name: "Mihails Bazilovs",
-        role: "Weapon Lead",
+        role: "Active Element Head",
         program: "Spin to win",
         image: "/team/mihails.png",
         initials: "MB",
       },
       {
         name: "Michael Beukhof",
-        role: "Weapon Team",
+        role: "Active Element Team",
         program: "More sparks, more fun",
         image: "/team/michael.png",
         initials: "MB",
@@ -105,7 +104,7 @@ const teamSections = [
     members: [
       {
         name: "Jits Kamps",
-        role: "Electrical Engineer",
+        role: "Wire Systems & Power Distribution",
         program: "Magic smoke is expensive",
         image: "/team/jits.png",
         initials: "JK",
@@ -113,13 +112,13 @@ const teamSections = [
       {
         name: "Neiv Malaviya",
         role: "Data Logging & Visualization",
-        program: "printf debugging enthusiast",
+        program: "Print debugging enthusiast",
         image: "/team/neiv.png",
         initials: "NM",
       },
       {
         name: "Luka Ponomarenko",
-        role: "Core & Kinetic Firmware",
+        role: "Core & Active Firmware",
         program: "Segmentation fault? I hardly know her",
         image: "/team/luka.png",
         initials: "LP",
@@ -201,7 +200,9 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
         <p className="text-white/60">{section.description}</p>
       </div>
 
-      <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${isElectrical ? "content-center flex-1" : "items-stretch"}`}>
+      <div
+        className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${isElectrical ? "flex-1 content-center" : "items-stretch"}`}
+      >
         {section.members.map((member, memberIndex) => (
           <TeamMemberCard key={member.name} member={member} index={memberIndex} />
         ))}
@@ -243,9 +244,9 @@ export default function TeamPage() {
               variants={fadeInUp}
               className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HCR is powered by dedicated students from HAN University. From mechanical engineers to
-              embedded systems specialists, our diverse team brings together the skills needed to
-              build competitive combat robots.
+              HCR is powered by students from HAN University. From mechanical engineers to 
+              embedded systems specialists, our team brings together the skills needed to 
+              build competition robots.
             </motion.p>
           </motion.div>
         </div>
@@ -310,8 +311,7 @@ export default function TeamPage() {
               Explore <span className="text-gradient">HCR</span>
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
-              Discover what our team is working on and see how we&apos;re building competitive
-              combat robots here at HAN University.
+              See what our team is working on and how we are building competition robots at HAN University.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/robot">

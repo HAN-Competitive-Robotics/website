@@ -27,19 +27,19 @@ const divisions = [
     icon: Wrench,
     title: "Mechanical Engineering",
     description:
-      "CAD design, structural analysis, and precision manufacturing of robot chassis and weapon systems.",
+      "CAD design, structural analysis, and manufacturing of robot chassis and active elements.",
   },
   {
     icon: Zap,
     title: "Electrical Engineering",
     description:
-      "Power distribution, motor control, wiring harnesses, and electrical safety systems.",
+      "Power distribution, motor control, wiring, and electrical safety systems.",
   },
   {
     icon: Cpu,
     title: "Embedded Systems",
     description:
-      "Custom PCB design, firmware development, and real-time control systems for combat robotics.",
+      "Custom PCB design, firmware development, and real time control systems for robotics.",
   },
 
 ];
@@ -49,21 +49,21 @@ const updates = [
     date: "March 2026",
     title: "HCR-1 Design Complete",
     excerpt:
-      "Our first featherweight combat robot design has been finalized. Manufacturing begins next month.",
+      "Our first featherweight robot design is finalized. Manufacturing starts next month.",
     category: "Development",
   },
   {
     date: "February 2026",
     title: "New Team Members Joined",
     excerpt:
-      "Welcome to our new mechanical and embedded systems engineers joining for the 2026 season.",
+      "Welcome to our new mechanical and embedded systems engineers for the 2026 season.",
     category: "Team",
   },
   {
     date: "January 2026",
     title: "Sponsorship Goals Met",
     excerpt:
-      "Thanks to our amazing sponsors, we've secured funding for our first competition season.",
+      "Thanks to our sponsors, we have funding for our first competition season.",
     category: "Sponsors",
   },
 ];
@@ -116,8 +116,7 @@ export default function HomePage() {
               variants={fadeInUp}
               className="mb-8 max-w-2xl text-xl text-white/70 sm:text-2xl"
             >
-              Engineering combat robots for European competitions. Built by students, powered by
-              passion.
+              Building robots for European competitions. Made by students, powered by passion.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -206,15 +205,12 @@ export default function HomePage() {
                 What is <span className="text-gradient">HCR?</span>
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-white/70">
-                HAN Competitive Robotics (HCR) is a student engineering team at HAN University of
-                Applied Sciences in the Netherlands. We design, build, and compete with
-                featherweight combat robots in European robotics competitions.
+                HAN Competitive Robotics (HCR) is a student team at HAN University in the Netherlands. 
+                We design, build, and compete with featherweight robots in European robotics events.
               </p>
               <p className="mb-8 leading-relaxed text-white/60">
-                Our team brings together students from various engineering disciplines including
-                Embedded Systems Engineering and Mechanical Engineering. Together, we push the
-                boundaries of what&apos;s possible in combat robotics while developing real-world
-                engineering skills.
+                Our team brings together students from engineering programs including Embedded Systems 
+                and Mechanical Engineering. Together we work on real projects and develop practical skills.
               </p>
               <Link href="/about">
                 <Button
@@ -261,27 +257,26 @@ export default function HomePage() {
               What We <span className="text-gradient">Build</span>
             </h2>
             <p className="text-lg text-white/60">
-              From concept to combat-ready machine, we engineer every aspect of our robots in-house
-              at HAN University.
+              From concept to competition ready machine, we engineer every part of our robots at HAN.
             </p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                title: "Combat Robots",
+                title: "Competition Robots",
                 description:
-                  "Featherweight combat robots (≤13.6 kg) built for durability, power, and competitive advantage.",
+                  "Featherweight robots built for durability, power, and competitive performance.",
               },
               {
                 title: "Custom Electronics",
                 description:
-                  "Proprietary control systems, motor drivers, and power management designed for extreme conditions.",
+                  "Control systems, motor drivers, and power management for demanding conditions.",
               },
               {
-                title: "Weapon Systems",
+                title: "Active Systems",
                 description:
-                  "High-kinetic-energy weapons including drums, spinners, and hammers engineered for maximum impact.",
+                  "High energy active elements including drums, spinners, and hammers for competitive use.",
               },
             ].map((item, index) => (
               <motion.div
@@ -321,8 +316,7 @@ export default function HomePage() {
               Engineering <span className="text-gradient">Divisions</span>
             </h2>
             <p className="text-lg text-white/60">
-              Our team is organized into specialized divisions, each focusing on critical aspects of
-              robot development.
+              Our team is organized into divisions, each focusing on key parts of robot development.
             </p>
           </motion.div>
 
@@ -428,8 +422,7 @@ export default function HomePage() {
               Proudly Supported <span className="text-gradient">By</span>
             </h2>
             <p className="text-lg text-white/60">
-              Our sponsors make it possible to build competitive combat robots and represent HAN
-              University at European competitions.
+              Our sponsors make it possible to build robots and represent HAN at European competitions.
             </p>
           </motion.div>
 
@@ -488,11 +481,10 @@ export default function HomePage() {
             className="mx-auto max-w-4xl text-center"
           >
             <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              Interested in <span className="text-gradient">Combat Robotics?</span>
+              Interested in <span className="text-gradient">Robotics?</span>
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
-              Learn more about HAN Competitive Robotics and how we&apos;re pushing the boundaries of
-              student engineering at HAN University.
+              Learn more about HAN Competitive Robotics and how we are building robots at HAN University.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/about">

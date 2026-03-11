@@ -50,8 +50,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/60">
-              HAN Competitive Robotics is a student engineering team building featherweight combat
-              robots at HAN, Netherlands.
+              HAN Competitive Robotics is a student team building featherweight robots at HAN, Netherlands.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -133,7 +132,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-center text-sm text-white/40 sm:text-left">
-            © {new Date().getFullYear()} HAN Competitive Robotics. All rights reserved.
+            {new Date().getFullYear()} HAN Competitive Robotics. All rights reserved.
           </p>
         </div>
       </div>

@@ -36,7 +36,7 @@ const learningOutcomes = [
     icon: Cog,
     title: "Mechanical Design",
     description:
-      "CAD modeling, stress analysis, and manufacturing processes including CNC machining and 3D printing.",
+      "CAD modeling, stress analysis, and manufacturing including CNC machining and 3D printing.",
   },
   {
     icon: Cpu,
@@ -48,20 +48,20 @@ const learningOutcomes = [
     icon: Users,
     title: "Project Management",
     description:
-      "Agile methodologies, team coordination, budgeting, and deadline management in engineering projects.",
+      "Agile methods, team coordination, budgeting, and deadline management in engineering projects.",
   },
   {
     icon: Award,
     title: "Competition Experience",
     description:
-      "Real-world testing under pressure, troubleshooting in time-critical situations, and sportsmanship.",
+      "Real world testing under pressure, troubleshooting in time critical situations, and sportsmanship.",
   },
 ];
 
 const teamStructure = [
   {
     title: "Management",
-    members: "4-5 students",
+    members: "4 to 5 students",
     responsibilities: [
       "Team leadership and strategy",
       "Sponsor relations",
@@ -71,31 +71,31 @@ const teamStructure = [
   },
   {
     title: "Mechanical Engineering",
-    members: "8-10 students",
+    members: "8 to 10 students",
     responsibilities: [
       "Robot chassis design",
-      "Weapon system development",
-      "Manufacturing & assembly",
+      "Active element development",
+      "Manufacturing and assembly",
       "Materials selection",
     ],
   },
   {
     title: "Embedded Systems",
-    members: "6-8 students",
+    members: "6 to 8 students",
     responsibilities: [
       "Control system firmware",
-      "PCB design & prototyping",
+      "PCB design and prototyping",
       "Sensor integration",
       "Power electronics",
     ],
   },
   {
     title: "Operations",
-    members: "3-4 students",
+    members: "3 to 4 students",
     responsibilities: [
-      "Social media & marketing",
+      "Social media and marketing",
       "Documentation",
-      "Logistics & transport",
+      "Logistics and transport",
       "Team welfare",
     ],
   },
@@ -126,16 +126,16 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             >
-              Engineering Excellence at <span className="text-gradient">HAN University</span>
+              Engineering at <span className="text-gradient">HAN University</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
               className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HAN Competitive Robotics (HCR) is a student engineering team building featherweight
-              combat robots for competitions across Europe. We bring together passionate students
-              from various engineering disciplines to push the boundaries of robotic combat.
+              HAN Competitive Robotics (HCR) is a student team building featherweight robots 
+              for competitions across Europe. We bring together passionate students from various 
+              engineering programs to work on real robotics projects.
             </motion.p>
           </motion.div>
         </div>
@@ -157,21 +157,19 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  HCR is a student team at HAN dedicated to the
-                  design, manufacture, and competition of featherweight combat robots. Founded in
-                  2025, our team represents the university at robotic combat events throughout
-                  Europe.
+                  HCR is a student team at HAN dedicated to the design, manufacture, and 
+                  competition of featherweight robots. Founded in 2025, our team represents 
+                  the university at robotics events throughout Europe.
                 </p>
                 <p>
-                  We compete in the featherweight class (≤13.6 kg), where our robots face off
-                  against other student and hobbyist teams in a test of engineering skill, driving
+                  We compete in the featherweight class (up to 13.6 kg), where our robots face 
+                  other student and hobbyist teams in a test of engineering skill, driving 
                   ability, and strategic thinking.
                 </p>
                 <p>
-                  Our team comprises students from programs including Embedded Systems Engineering,
-                  Mechanical Engineering, and related technical fields. This multidisciplinary
-                  approach allows us to tackle every aspect of robot development, from initial
-                  concept to competitive deployment.
+                  Our team includes students from programs like Embedded Systems Engineering 
+                  and Mechanical Engineering. This multidisciplinary approach lets us tackle 
+                  every aspect of robot development, from concept to competition.
                 </p>
               </div>
             </motion.div>
@@ -210,9 +208,9 @@ export default function AboutPage() {
               Why We <span className="text-gradient">Exist</span>
             </h2>
             <p className="mb-8 text-lg leading-relaxed text-white/70">
-              Our mission is to provide HAN University students with hands-on engineering experience
-              through the exciting world of combat robotics. We believe that building robots that
-              can survive the arena teaches lessons that no classroom can match.
+              Our mission is to give HAN University students hands on engineering experience 
+              through robotics competitions. We believe building robots that can survive the 
+              arena teaches lessons no classroom can match.
             </p>
 
             <div className="mt-12 grid gap-8 sm:grid-cols-3">
@@ -221,7 +219,7 @@ export default function AboutPage() {
                   icon: Target,
                   title: "Excellence",
                   description:
-                    "Striving for engineering excellence in every component we design and build.",
+                    "Striving for engineering excellence in every part we design and build.",
                 },
                 {
                   icon: GraduationCap,
@@ -273,7 +271,7 @@ export default function AboutPage() {
               What Students <span className="text-gradient">Learn</span>
             </h2>
             <p className="text-lg text-white/60">
-              Joining HCR provides practical experience that complements academic learning and
+              Joining HCR gives practical experience that complements academic learning and 
               prepares students for engineering careers.
             </p>
           </motion.div>
@@ -317,8 +315,8 @@ export default function AboutPage() {
               Team <span className="text-gradient">Structure</span>
             </h2>
             <p className="text-lg text-white/60">
-              HCR is organized into specialized divisions, each led by experienced students and
-              focused on specific aspects of our robot development.
+              HCR is organized into divisions, each led by experienced students and focused 
+              on specific parts of our robot development.
             </p>
           </motion.div>
 
@@ -354,7 +352,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Combat Robotics */}
+      {/* Why Robotics */}
       <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -366,25 +364,24 @@ export default function AboutPage() {
             >
               <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">The Sport</Badge>
               <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
-                Why Combat <span className="text-gradient">Robotics?</span>
+                Why Competition <span className="text-gradient">Robotics?</span>
               </h2>
               <div className="space-y-6 leading-relaxed text-white/70">
                 <p>
-                  Combat robotics is more than just destruction—it&apos;s a test of engineering
-                  under extreme conditions. When two robots enter the arena, every design decision
-                  is put to the ultimate test.
+                  Competition robotics is more than just building machines. It is a test of 
+                  engineering under demanding conditions. When robots enter the arena, every 
+                  design decision is put to the test.
                 </p>
                 <p>
-                  The sport demands excellence in mechanical design, electrical engineering, and
-                  control systems. A robot must survive impacts that would destroy ordinary machines
-                  while delivering enough force to disable opponents. This requires innovative
+                  The sport demands excellence in mechanical design, electrical engineering, and 
+                  control systems. A robot must survive impacts that would damage ordinary machines 
+                  while delivering enough force to compete effectively. This requires innovative 
                   thinking, careful material selection, and precision manufacturing.
                 </p>
                 <p>
-                  For students, combat robotics provides unparalleled learning opportunities. The
-                  tight integration of mechanical and electronic systems, combined with the pressure
-                  of competition, accelerates skill development in ways traditional coursework
-                  cannot match.
+                  For students, competition robotics offers great learning opportunities. The tight 
+                  integration of mechanical and electronic systems, combined with the pressure of 
+                  competition, accelerates skill development beyond traditional coursework.
                 </p>
               </div>
             </motion.div>
@@ -405,12 +402,12 @@ export default function AboutPage() {
                 {
                   stat: "250+",
                   unit: "g",
-                  label: "Kinetic energy in a spinning weapon",
+                  label: "Energy in a spinning active element",
                 },
                 {
                   stat: "3",
                   unit: "minutes",
-                  label: "Duration of a typical combat match",
+                  label: "Duration of a typical competition match",
                 },
                 {
                   stat: "∞",
@@ -448,8 +445,8 @@ export default function AboutPage() {
               Want to Learn <span className="text-gradient">More?</span>
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
-              Discover more about our team, our robot, and how HCR brings together students from
-              across HAN University to build competitive combat robots.
+              Discover more about our team, our robot, and how HCR brings together students from 
+              across HAN University to build competition robots.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/team">

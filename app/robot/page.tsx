@@ -34,11 +34,11 @@ const staggerContainer = {
 
 const specs = [
   { label: "Class", value: "Featherweight", detail: "Competition class" },
-  { label: "Weight", value: "≤13.6 kg", detail: "Maximum competition limit" },
-  { label: "Dimensions", value: "TBD", detail: "Length × Width × Height" },
-  { label: "Drive System", value: "Brushless", detail: "2WD/4WD configuration" },
-  { label: "Weapon", value: "TBD", detail: "High-performance kinetic mechanism" },
-  { label: "Battery", value: "LiPo", detail: "6S - 12S configuration" },
+  { label: "Weight", value: "13.6 kg", detail: "Competition limit" },
+  { label: "Dimensions", value: "TBD", detail: "Length x Width x Height" },
+  { label: "Drive System", value: "Brushless", detail: "2WD or 4WD setup" },
+  { label: "Active Element", value: "TBD", detail: "High energy mechanism" },
+  { label: "Battery", value: "LiPo", detail: "6S to 12S setup" },
   { label: "Control", value: "2.4 GHz RC", detail: "With custom failsafe" },
   { label: "Frame", value: "CNC Aluminium", detail: "With composite armor" },
 ];
@@ -48,31 +48,31 @@ const subsystems = [
     icon: Gauge,
     title: "Drive System",
     description:
-      "High-torque brushless motors paired with precision gearboxes deliver rapid acceleration and precise maneuverability in the arena.",
+      "High torque brushless motors with precision gearboxes give fast acceleration and smooth control in the arena.",
     features: [
       "Brushless outrunner motors",
       "Planetary gearboxes",
-      "Foam-filled arena wheels",
+      "Foam filled arena wheels",
       "Integrated motor controllers",
     ],
   },
   {
     icon: Hammer,
-    title: "Kinetic System",
+    title: "Active System",
     description:
-      "A high-performance kinetic system designed for competitive impact. The mechanism assembly is engineered for reliability under extreme loads.",
+      "A high performance active element designed for competition use. The mechanism is built for reliability under heavy loads.",
     features: [
-      "High-RPM brushless kinetic motor",
+      "High RPM brushless motor",
       "Hardened steel contact element",
       "Precision bearings",
-      "Tool-free maintenance access",
+      "Tool free maintenance access",
     ],
   },
   {
     icon: Cpu,
     title: "Electronics",
     description:
-      "Custom-designed PCBs handle power distribution, motor control, and sensor integration in a compact, robust package.",
+      "Custom PCBs handle power distribution, motor control, and sensor integration in a compact and robust package.",
     features: [
       "Custom ESC design",
       "Power distribution board",
@@ -84,21 +84,21 @@ const subsystems = [
     icon: Radio,
     title: "Control System",
     description:
-      "Reliable 2.4 GHz radio control with custom failsafe logic ensures the robot responds instantly and safely in the arena.",
+      "Reliable 2.4 GHz radio control with custom failsafe logic ensures the robot responds quickly and safely in the arena.",
     features: [
       "2.4 GHz RC receiver",
       "Custom failsafe logic",
-      "Dual-channel redundancy",
-      "Real-time telemetry",
+      "Dual channel redundancy",
+      "Real time telemetry",
     ],
   },
   {
     icon: Battery,
     title: "Power System",
     description:
-      "High-discharge LiPo batteries provide the massive current required for both drive and kinetic systems during competition.",
+      "High discharge LiPo batteries provide the current needed for both drive and active systems during competition.",
     features: [
-      "High-C rating LiPo packs",
+      "High C rating LiPo packs",
       "Balanced charging system",
       "Current monitoring",
       "Thermal protection",
@@ -108,7 +108,7 @@ const subsystems = [
     icon: Settings,
     title: "Manufacturing",
     description:
-      "In-house manufacturing capabilities including CNC machining, 3D printing, and composite fabrication for rapid iteration.",
+      "In house manufacturing includes CNC machining, 3D printing, and composite work for fast iteration.",
     features: [
       "CNC aluminium chassis",
       "3D printed prototypes",
@@ -151,9 +151,8 @@ export default function RobotPage() {
               variants={fadeInUp}
               className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HCR-1 is our first featherweight battlebot, designed and built entirely by HAN
-              University students. Every component has been engineered for maximum performance
-              within competition limits.
+              HCR-1 is our first featherweight battlebot, designed and built by HAN students. 
+              Every part is engineered for performance within competition limits.
             </motion.p>
           </motion.div>
         </div>
@@ -198,25 +197,23 @@ export default function RobotPage() {
             >
               <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Overview</Badge>
               <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
-                Designed for <span className="text-gradient">Competition</span>
+                Built for <span className="text-gradient">Competition</span>
               </h2>
               <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  HCR-1 represents our team&apos;s first entry into competitive robotics.
-                  Built from the ground up using advanced engineering principles and manufacturing
-                  techniques, this robot embodies everything we&apos;ve learned as a team.
+                  HCR-1 is our first entry into competitive robotics. Built from the ground up 
+                  using engineering principles and manufacturing techniques, this robot shows 
+                  everything we have learned as a team.
                 </p>
                 <p>
-                  The design prioritizes durability and repairability—key factors in competitive robotics
-                  where damage is inevitable. Every component is accessible for quick repairs
-                  between matches, and the modular architecture allows for rapid iteration and
-                  improvement.
+                  The design focuses on durability and repairability, key factors in competitions 
+                  where damage happens. Every part is accessible for quick repairs between matches, 
+                  and the modular design allows for fast iteration and improvement.
                 </p>
                 <p>
-                  Under the hood, HCR-1 features custom electronics designed specifically for the
-                  demands of robotic competition. From the power distribution system to the motor
-                  controllers, every circuit has been optimized for reliability under extreme
-                  conditions.
+                  Inside, HCR-1 uses custom electronics built for the demands of robotic competition. 
+                  From the power system to the motor controllers, every circuit is optimized for 
+                  reliability under stress.
                 </p>
               </div>
 
@@ -261,7 +258,7 @@ export default function RobotPage() {
               Robot <span className="text-gradient">Specifications</span>
             </h2>
             <p className="text-lg text-white/60">
-              Detailed technical specifications for HCR-1, our featherweight battlebot.
+              Technical specs for HCR-1, our featherweight battlebot.
             </p>
           </motion.div>
 
@@ -318,8 +315,7 @@ export default function RobotPage() {
               Robot <span className="text-gradient">Subsystems</span>
             </h2>
             <p className="text-lg text-white/60">
-              A closer look at the engineering that powers HCR-1, from drive systems to kinetic
-              mechanics.
+              A closer look at the engineering that powers HCR-1.
             </p>
           </motion.div>
 
@@ -376,21 +372,19 @@ export default function RobotPage() {
               </h2>
               <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  The journey from concept to battlebot involves countless hours of CAD
-                  modeling, simulation, and iterative prototyping. Our design process follows
-                  engineering best practices while maintaining the flexibility needed for rapid
-                  innovation.
+                  The journey from concept to competition robot takes many hours of CAD modeling, 
+                  simulation, and prototyping. Our design process follows engineering best practices 
+                  while keeping the flexibility needed for fast iteration.
                 </p>
                 <p>
-                  We use industry-standard CAD software to model every component, allowing us to
-                  verify clearances, analyze stress distributions, and generate manufacturing
-                  drawings. Finite element analysis helps us optimize the chassis and kinetic system for
-                  strength-to-weight ratio.
+                  We use industry standard CAD software to model every part, letting us verify 
+                  clearances, analyze stress, and generate manufacturing drawings. Finite element 
+                  analysis helps us optimize the chassis and active system for strength to weight ratio.
                 </p>
                 <p>
-                  Prototypes are created using 3D printing for quick iteration, followed by CNC
-                  machining for the final competition-grade components. This approach allows us to
-                  test and refine designs before committing to expensive manufacturing processes.
+                  Prototypes are made using 3D printing for quick iteration, followed by CNC 
+                  machining for final competition grade parts. This lets us test and refine designs 
+                  before committing to expensive manufacturing.
                 </p>
               </div>
             </motion.div>
@@ -431,8 +425,7 @@ export default function RobotPage() {
               Future <span className="text-gradient">Robots</span>
             </h2>
             <p className="text-lg text-white/60">
-              HCR-1 is just the beginning. We&apos;re already planning our next generation of
-              battlebots.
+              HCR-1 is just the start. We are already planning our next robots.
             </p>
           </motion.div>
 
@@ -448,7 +441,7 @@ export default function RobotPage() {
                 name: "HCR-2",
                 status: "Planned 2027",
                 description:
-                  "Next generation featuring lessons learned from HCR-1 and advanced manufacturing techniques.",
+                  "Next generation with lessons from HCR-1 and advanced manufacturing techniques.",
               },
             ].map((robot, index) => (
               <motion.div
@@ -502,8 +495,7 @@ export default function RobotPage() {
               Support <span className="text-gradient">HCR</span>
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
-              Partner with us to support student engineering and help us build the next generation
-              of HCR battlebots.
+              Partner with us to support student engineering and help us build the next HCR robots.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/sponsors">

@@ -21,7 +21,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -42,14 +41,14 @@ const contactInfo = [
     title: "Email",
     value: "hcr@han.nl",
     href: "mailto:hcr@han.nl",
-    description: "For general inquiries",
+    description: "For general questions",
   },
   {
     icon: Mail,
     title: "Sponsorship",
     value: "hcr@han.nl",
     href: "mailto:hcr@han.nl",
-    description: "For sponsorship inquiries",
+    description: "For sponsorship questions",
   },
 ];
 
@@ -78,7 +77,7 @@ const faqItems = [
   {
     question: "What is HCR?",
     answer:
-      "HAN Competitive Robotics (HCR) is a student engineering team building featherweight combat robots for competitions across Europe.",
+      "HAN Competitive Robotics (HCR) is a student team building featherweight robots for competitions across Europe.",
   },
   {
     question: "Where is HCR based?",
@@ -92,7 +91,7 @@ const faqItems = [
   {
     question: "Do team members need prior robotics experience?",
     answer:
-      "No! We welcome students of all skill levels. Enthusiasm and willingness to learn are more important than prior experience.",
+      "No. We welcome students of all skill levels. Enthusiasm and willingness to learn are more important than prior experience.",
   },
 ];
 
@@ -149,7 +148,7 @@ export default function ContactPage() {
               variants={fadeInUp}
               className="mx-auto max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              Have questions about HCR? Want to collaborate or sponsor? We&apos;d love to hear from
+              Have questions about HCR? Want to collaborate or sponsor? We would love to hear from 
               you. Reach out using any of the methods below.
             </motion.p>
           </motion.div>
@@ -172,11 +171,11 @@ export default function ContactPage() {
                 Contact Information
               </Badge>
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
-                Let&apos;s <span className="text-gradient">Connect</span>
+                Lets <span className="text-gradient">Connect</span>
               </h2>
               <p className="mb-6 leading-relaxed text-white/60">
-                Whether you&apos;re a prospective student, potential sponsor, or just curious about
-                combat robotics, we&apos;re happy to answer your questions.
+                Whether you are a prospective student, potential sponsor, or just curious about 
+                robotics, we are happy to answer your questions.
               </p>
 
               {/* Email Contacts */}
@@ -255,7 +254,7 @@ export default function ContactPage() {
                     <>
                       <h3 className="mb-2 text-2xl font-bold text-white">Send us a Message</h3>
                       <p className="mb-6 text-white/60">
-                        Fill out the form below and we&apos;ll get back to you as soon as possible.
+                        Fill out the form below and we will get back to you as soon as possible.
                       </p>
 
                       <form onSubmit={handleSubmit} className="flex flex-1 flex-col space-y-5">
@@ -358,7 +357,7 @@ export default function ContactPage() {
                       </div>
                       <h3 className="mb-2 text-2xl font-bold text-white">Message Sent!</h3>
                       <p className="mb-6 text-white/60">
-                        Thank you for reaching out. We&apos;ll get back to you within 48 hours.
+                        Thank you for reaching out. We will get back to you within 48 hours.
                       </p>
                       <Button
                         onClick={() => setFormSubmitted(false)}
@@ -391,7 +390,7 @@ export default function ContactPage() {
               Frequently Asked <span className="text-gradient">Questions</span>
             </h2>
             <p className="text-lg text-white/60">
-              Quick answers to common questions. Can&apos;t find what you&apos;re looking for?
+              Quick answers to common questions. Cannot find what you are looking for? 
               Contact us directly.
             </p>
           </motion.div>
@@ -431,8 +430,7 @@ export default function ContactPage() {
               Support <span className="text-gradient">HCR</span>
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
-              Interested in supporting our team or learning more about our work? Get in touch with
-              us.
+              Interested in supporting our team or learning more about our work? Get in touch with us.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/sponsors">

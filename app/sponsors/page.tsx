@@ -26,26 +26,26 @@ const benefits = [
     icon: Award,
     title: "Engineering Exposure",
     description:
-      "Connect with highly motivated engineering students and showcase your brand to the next generation of technical talent.",
+      "Connect with motivated engineering students and show your brand to the next generation of technical talent.",
   },
   {
     icon: Users,
     title: "Student Innovation",
     description:
-      "Support cutting-edge student engineering projects and be part of innovative robotics development.",
+      "Support student engineering projects and be part of innovative robotics development.",
   },
   {
     icon: Globe,
     title: "Brand Visibility",
     description:
-      "Gain visibility at robotics competitions, university events, and across our digital platforms reaching thousands.",
+      "Get visibility at robotics competitions, university events, and our digital platforms.",
   },
 ];
 
 const sponsorTiers = [
   {
     name: "Platinum",
-    price: "€5,000+",
+    price: "5,000+",
     color: "from-purple-500 to-purple-700",
     icon: Sparkles,
     features: [
@@ -60,7 +60,7 @@ const sponsorTiers = [
   },
   {
     name: "Gold",
-    price: "€2,500",
+    price: "2,500",
     color: "from-yellow-500 to-yellow-700",
     icon: Medal,
     features: [
@@ -73,7 +73,7 @@ const sponsorTiers = [
   },
   {
     name: "Silver",
-    price: "€1,000",
+    price: "1,000",
     color: "from-gray-400 to-gray-600",
     icon: Star,
     features: [
@@ -85,7 +85,7 @@ const sponsorTiers = [
   },
   {
     name: "Supporter",
-    price: "€250+",
+    price: "250+",
     color: "from-[#E5005B] to-[#FF6B9A]",
     icon: Zap,
     features: [
@@ -126,7 +126,7 @@ export default function SponsorsPage() {
               Current <span className="text-gradient">Sponsors</span>
             </h2>
             <p className="text-white/60">
-              We&apos;re grateful to these organizations for supporting HCR and making our
+              We are grateful to these organizations for supporting HCR and making our 
               engineering journey possible.
             </p>
           </motion.div>
@@ -183,9 +183,9 @@ export default function SponsorsPage() {
               variants={fadeInUp}
               className="mx-auto max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              Partner with HAN Competitive Robotics and support the next generation of engineering
-              talent. Your sponsorship helps us build competitive combat robots and provides
-              valuable opportunities for HAN University students.
+              Partner with HAN Competitive Robotics and support the next generation of engineering 
+              talent. Your sponsorship helps us build competition robots and provides valuable 
+              opportunities for HAN University students.
             </motion.p>
 
             <motion.div variants={fadeInUp} className="mt-10">
@@ -220,7 +220,7 @@ export default function SponsorsPage() {
               Why <span className="text-gradient">Sponsor HCR?</span>
             </h2>
             <p className="text-lg text-white/60">
-              Partnering with HCR offers unique benefits for companies looking to connect with
+              Partnering with HCR offers unique benefits for companies looking to connect with 
               engineering talent and support student innovation.
             </p>
           </motion.div>
@@ -266,8 +266,8 @@ export default function SponsorsPage() {
               Sponsor <span className="text-gradient">Tiers</span>
             </h2>
             <p className="text-lg text-white/60">
-              Choose a sponsorship package that aligns with your goals and budget. All contributions
-              directly support our team&apos;s engineering efforts.
+              Choose a sponsorship package that fits your goals and budget. All contributions 
+              directly support our engineering work.
             </p>
           </motion.div>
 
@@ -300,7 +300,7 @@ export default function SponsorsPage() {
                         <Icon className="h-6 w-6 text-white" />
                       </div>
                       <CardTitle className="text-2xl font-bold text-white">{tier.name}</CardTitle>
-                      <p className="text-gradient mt-2 text-3xl font-bold">{tier.price}</p>
+                      <p className="text-gradient mt-2 text-3xl font-bold">{tier.price} EUR</p>
                     </CardHeader>
                     <CardContent className="flex-1">
                       <Separator className="mb-6 bg-white/10" />
