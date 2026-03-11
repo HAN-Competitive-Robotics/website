@@ -54,18 +54,18 @@ const teamSections = [
     description: "Designing and manufacturing the robot chassis, drive train, and weapons",
     members: [
       {
-        name: "Vishaal Girish Gopala Krishnan",
-        role: "Drive Train",
-        program: "Making things spin since day one",
-        image: "/team/vishaal.png",
-        initials: "VG",
-      },
-      {
         name: "Rafiul Islam",
         role: "Drive Train Head",
         program: "Torque is cheap, grip is everything",
         image: "/team/rafiul.png",
         initials: "RI",
+      },
+      {
+        name: "Vishaal Girish Gopala Krishnan",
+        role: "Drive Train",
+        program: "Making things spin since day one",
+        image: "/team/vishaal.png",
+        initials: "VG",
       },
       {
         name: "Germ van Popta",
@@ -180,6 +180,7 @@ function TeamMemberCard({
 
 function TeamSection({ section, index }: { section: (typeof teamSections)[0]; index: number }) {
   const Icon = section.icon;
+  const isElectrical = section.id === "electrical-embedded";
 
   return (
     <motion.section
@@ -187,7 +188,7 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="h-full"
+      className={`flex h-full flex-col ${isElectrical ? "justify-start" : ""}`}
       id={section.id}
     >
       <div className="mb-8">
@@ -200,7 +201,7 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
         <p className="text-white/60">{section.description}</p>
       </div>
 
-      <div className="grid items-stretch gap-4 grid-cols-1 sm:grid-cols-2">
+      <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${isElectrical ? "content-center flex-1" : "items-stretch"}`}>
         {section.members.map((member, memberIndex) => (
           <TeamMemberCard key={member.name} member={member} index={memberIndex} />
         ))}
