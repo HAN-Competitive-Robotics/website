@@ -187,7 +187,7 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="h-full py-10 first:pt-0"
+      className="h-full"
       id={section.id}
     >
       <div className="mb-8">
@@ -278,7 +278,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team Sections - Custom Layout */}
-      <section className="bg-[#121212] py-8">
+      <section className="bg-[#121212] pt-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Management - Centered at top */}
           <div className="mb-12 flex justify-center">
