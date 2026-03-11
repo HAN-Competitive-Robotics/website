@@ -114,58 +114,12 @@ const currentSponsors = [
 export default function SponsorsPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-16 lg:py-20">
+      {/* Current Sponsors */}
+      <section className="relative overflow-hidden bg-[#0f0f0f] py-16 lg:py-20">
         <div className="bg-grid-pattern absolute inset-0 opacity-30" />
         <div className="blur-glow absolute top-0 left-1/2 h-1/2 w-full -translate-x-1/2 rounded-full bg-[#E5005B]/10 blur-[200px]" />
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-            className="mx-auto max-w-4xl text-center"
-          >
-            <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
-                <Award className="mr-1.5 h-3.5 w-3.5" />
-                Partnerships
-              </Badge>
-            </motion.div>
-
-            <motion.h1
-              variants={fadeInUp}
-              className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
-            >
-              Become a <span className="text-gradient">Sponsor</span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="mx-auto max-w-3xl text-xl leading-relaxed text-white/70"
-            >
-              Partner with HAN Competitive Robotics and support the next generation of engineering
-              talent. Your sponsorship helps us build competitive combat robots and provides
-              valuable opportunities for HAN University students.
-            </motion.p>
-
-            <motion.div variants={fadeInUp} className="mt-10">
-              <Link href="#contact">
-                <Button
-                  size="lg"
-                  className="bg-[#E5005B] px-10 py-6 text-lg font-semibold text-white hover:bg-[#E5005B]/90"
-                >
-                  Become a Sponsor
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Current Sponsors */}
-      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -245,6 +199,54 @@ export default function SponsorsPage() {
                 <p className="text-sm text-white/50">2 supporters</p>
               </CardContent>
             </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Become a Sponsor */}
+      <section className="bg-[#0a0a0a] py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl text-center"
+          >
+            <motion.div variants={fadeInUp}>
+              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
+                <Award className="mr-1.5 h-3.5 w-3.5" />
+                Partnerships
+              </Badge>
+            </motion.div>
+
+            <motion.h1
+              variants={fadeInUp}
+              className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
+            >
+              Become a <span className="text-gradient">Sponsor</span>
+            </motion.h1>
+
+            <motion.p
+              variants={fadeInUp}
+              className="mx-auto max-w-3xl text-xl leading-relaxed text-white/70"
+            >
+              Partner with HAN Competitive Robotics and support the next generation of engineering
+              talent. Your sponsorship helps us build competitive combat robots and provides
+              valuable opportunities for HAN University students.
+            </motion.p>
+
+            <motion.div variants={fadeInUp} className="mt-10">
+              <Link href="#contact">
+                <Button
+                  size="lg"
+                  className="bg-[#E5005B] px-10 py-6 text-lg font-semibold text-white hover:bg-[#E5005B]/90"
+                >
+                  Become a Sponsor
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
