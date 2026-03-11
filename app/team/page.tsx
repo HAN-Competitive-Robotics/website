@@ -212,7 +212,7 @@ function TeamSection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="py-16 first:pt-0"
+      className="py-10 first:pt-0"
       id={section.id}
     >
       <div className="mb-8">
@@ -244,7 +244,7 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-[#121212]">
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
+      <section className="relative py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px]" />
 
@@ -283,7 +283,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team Structure Overview */}
-      <section className="py-16 bg-[#1A1A1A] border-b border-white/10">
+      <section className="py-8 bg-[#1A1A1A] border-b border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
