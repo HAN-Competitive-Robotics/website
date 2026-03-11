@@ -56,7 +56,7 @@ const teamSections = [
       {
         name: "Vishaal Girish Gopala Krishnan",
         role: "Drive Train Lead",
-        program: "S6 Mechanical Engineering",
+        program: "\"Precision in motion, power in design\"",
         image: "/team/vishaal.png",
         initials: "VG",
       },

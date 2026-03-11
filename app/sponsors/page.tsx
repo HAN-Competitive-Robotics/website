@@ -107,14 +107,14 @@ const sponsorTiers = [
 ];
 
 const currentSponsors = [
-  { name: "HAN University of Applied Sciences", tier: "Platinum", logo: "/sponsors/han-platinum.png" },
-  { name: "Gold Sponsor 1", tier: "Gold", logo: "/sponsors/gold-1.png" },
-  { name: "Gold Sponsor 2", tier: "Gold", logo: "/sponsors/gold-2.png" },
-  { name: "Silver Sponsor 1", tier: "Silver", logo: "/sponsors/silver-1.png" },
-  { name: "Silver Sponsor 2", tier: "Silver", logo: "/sponsors/silver-2.png" },
-  { name: "Silver Sponsor 3", tier: "Silver", logo: "/sponsors/silver-3.png" },
-  { name: "Supporter 1", tier: "Supporter", logo: "/sponsors/supporter-1.png" },
-  { name: "Supporter 2", tier: "Supporter", logo: "/sponsors/supporter-2.png" },
+  { name: "HAN University of Applied Sciences", tier: "Platinum", logo: "/sponsors/han-platinum.svg" },
+  { name: "Gold Sponsor 1", tier: "Gold", logo: "/sponsors/gold-1.svg" },
+  { name: "Gold Sponsor 2", tier: "Gold", logo: "/sponsors/gold-2.svg" },
+  { name: "Silver Sponsor 1", tier: "Silver", logo: "/sponsors/silver-1.svg" },
+  { name: "Silver Sponsor 2", tier: "Silver", logo: "/sponsors/silver-2.svg" },
+  { name: "Silver Sponsor 3", tier: "Silver", logo: "/sponsors/silver-3.svg" },
+  { name: "Supporter 1", tier: "Supporter", logo: "/sponsors/supporter-1.svg" },
+  { name: "Supporter 2", tier: "Supporter", logo: "/sponsors/supporter-2.svg" },
 ];
 
 export default function SponsorsPage() {
