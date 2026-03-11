@@ -200,7 +200,7 @@ function TeamSection({ section, index }: { section: (typeof teamSections)[0]; in
         <p className="ml-13 pl-13 text-white/60">{section.description}</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {section.members.map((member, memberIndex) => (
           <TeamMemberCard key={member.name} member={member} index={memberIndex} />
         ))}
