@@ -82,7 +82,7 @@ const faqItems = [
   },
   {
     question: "Where is HCR based?",
-    answer: "We are based at HAN University of Applied Sciences in Arnhem, Netherlands.",
+    answer: "We are based at HAN in Arnhem, Netherlands.",
   },
   {
     question: "How can I support HCR?",
@@ -209,7 +209,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-white/50">Location</p>
-                    <p className="font-semibold text-white">HAN University of Applied Sciences</p>
+                    <p className="font-semibold text-white">HAN</p>
                     <p className="text-white/60">
                       Ruitenberglaan 31
                       <br />

@@ -33,11 +33,11 @@ const staggerContainer = {
 };
 
 const specs = [
-  { label: "Class", value: "Featherweight", detail: "Combat robot class" },
+  { label: "Class", value: "Featherweight", detail: "Competition class" },
   { label: "Weight", value: "≤13.6 kg", detail: "Maximum competition limit" },
   { label: "Dimensions", value: "TBD", detail: "Length × Width × Height" },
   { label: "Drive System", value: "Brushless", detail: "2WD/4WD configuration" },
-  { label: "Weapon", value: "TBD", detail: "High-impact kinetic weapon" },
+  { label: "Weapon", value: "TBD", detail: "High-performance kinetic mechanism" },
   { label: "Battery", value: "LiPo", detail: "6S - 12S configuration" },
   { label: "Control", value: "2.4 GHz RC", detail: "With custom failsafe" },
   { label: "Frame", value: "CNC Aluminium", detail: "With composite armor" },
@@ -52,18 +52,18 @@ const subsystems = [
     features: [
       "Brushless outrunner motors",
       "Planetary gearboxes",
-      "Foam-filled combat wheels",
+      "Foam-filled arena wheels",
       "Integrated motor controllers",
     ],
   },
   {
     icon: Hammer,
-    title: "Weapon System",
+    title: "Kinetic System",
     description:
-      "A high-kinetic-energy weapon designed for maximum impact. The weapon assembly is engineered for reliability under extreme loads.",
+      "A high-performance kinetic system designed for competitive impact. The mechanism assembly is engineered for reliability under extreme loads.",
     features: [
-      "High-RPM brushless weapon motor",
-      "Hardened steel impactor",
+      "High-RPM brushless kinetic motor",
+      "Hardened steel contact element",
       "Precision bearings",
       "Tool-free maintenance access",
     ],
@@ -84,7 +84,7 @@ const subsystems = [
     icon: Radio,
     title: "Control System",
     description:
-      "Reliable 2.4 GHz radio control with custom failsafe logic ensures the robot responds instantly and safely in combat.",
+      "Reliable 2.4 GHz radio control with custom failsafe logic ensures the robot responds instantly and safely in the arena.",
     features: [
       "2.4 GHz RC receiver",
       "Custom failsafe logic",
@@ -96,7 +96,7 @@ const subsystems = [
     icon: Battery,
     title: "Power System",
     description:
-      "High-discharge LiPo batteries provide the massive current required for both drive and weapon systems during combat.",
+      "High-discharge LiPo batteries provide the massive current required for both drive and kinetic systems during competition.",
     features: [
       "High-C rating LiPo packs",
       "Balanced charging system",
@@ -151,7 +151,7 @@ export default function RobotPage() {
               variants={fadeInUp}
               className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HCR-1 is our first featherweight combat robot, designed and built entirely by HAN
+              HCR-1 is our first featherweight battlebot, designed and built entirely by HAN
               University students. Every component has been engineered for maximum performance
               within competition limits.
             </motion.p>
@@ -174,7 +174,7 @@ export default function RobotPage() {
               <div className="relative aspect-square overflow-hidden rounded-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1563178406-4f8025767818?w=800&h=800&fit=crop"
-                  alt="HCR-1 Combat Robot"
+                  alt="HCR-1 Battlebot"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent" />
@@ -198,23 +198,23 @@ export default function RobotPage() {
             >
               <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Overview</Badge>
               <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
-                Designed for <span className="text-gradient">Combat</span>
+                Designed for <span className="text-gradient">Competition</span>
               </h2>
               <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  HCR-1 represents our team&apos;s first entry into competitive combat robotics.
+                  HCR-1 represents our team&apos;s first entry into competitive robotics.
                   Built from the ground up using advanced engineering principles and manufacturing
                   techniques, this robot embodies everything we&apos;ve learned as a team.
                 </p>
                 <p>
-                  The design prioritizes durability and repairability—key factors in combat robotics
+                  The design prioritizes durability and repairability—key factors in competitive robotics
                   where damage is inevitable. Every component is accessible for quick repairs
                   between matches, and the modular architecture allows for rapid iteration and
                   improvement.
                 </p>
                 <p>
                   Under the hood, HCR-1 features custom electronics designed specifically for the
-                  demands of robotic combat. From the power distribution system to the motor
+                  demands of robotic competition. From the power distribution system to the motor
                   controllers, every circuit has been optimized for reliability under extreme
                   conditions.
                 </p>
@@ -261,7 +261,7 @@ export default function RobotPage() {
               Robot <span className="text-gradient">Specifications</span>
             </h2>
             <p className="text-lg text-white/60">
-              Detailed technical specifications for HCR-1, our featherweight combat robot.
+              Detailed technical specifications for HCR-1, our featherweight battlebot.
             </p>
           </motion.div>
 
@@ -318,7 +318,7 @@ export default function RobotPage() {
               Robot <span className="text-gradient">Subsystems</span>
             </h2>
             <p className="text-lg text-white/60">
-              A closer look at the engineering that powers HCR-1, from drive systems to weapon
+              A closer look at the engineering that powers HCR-1, from drive systems to kinetic
               mechanics.
             </p>
           </motion.div>
@@ -372,11 +372,11 @@ export default function RobotPage() {
                 Design Process
               </Badge>
               <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
-                From CAD to <span className="text-gradient">Combat</span>
+                From CAD to <span className="text-gradient">Competition</span>
               </h2>
               <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  The journey from concept to competition robot involves countless hours of CAD
+                  The journey from concept to battlebot involves countless hours of CAD
                   modeling, simulation, and iterative prototyping. Our design process follows
                   engineering best practices while maintaining the flexibility needed for rapid
                   innovation.
@@ -384,7 +384,7 @@ export default function RobotPage() {
                 <p>
                   We use industry-standard CAD software to model every component, allowing us to
                   verify clearances, analyze stress distributions, and generate manufacturing
-                  drawings. Finite element analysis helps us optimize the chassis and weapon for
+                  drawings. Finite element analysis helps us optimize the chassis and kinetic system for
                   strength-to-weight ratio.
                 </p>
                 <p>
@@ -431,8 +431,8 @@ export default function RobotPage() {
               Future <span className="text-gradient">Robots</span>
             </h2>
             <p className="text-lg text-white/60">
-              HCR-1 is just the beginning. We&apos;re already planning our next generation of combat
-              robots.
+              HCR-1 is just the beginning. We&apos;re already planning our next generation of
+              battlebots.
             </p>
           </motion.div>
 
@@ -503,7 +503,7 @@ export default function RobotPage() {
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
               Partner with us to support student engineering and help us build the next generation
-              of HCR combat robots.
+              of HCR battlebots.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/sponsors">

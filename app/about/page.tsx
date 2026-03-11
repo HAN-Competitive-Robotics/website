@@ -157,7 +157,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  HCR is a student team at HAN University of Applied Sciences dedicated to the
+                  HCR is a student team at HAN dedicated to the
                   design, manufacture, and competition of featherweight combat robots. Founded in
                   2025, our team represents the university at robotic combat events throughout
                   Europe.

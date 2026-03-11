@@ -51,7 +51,7 @@ export function Footer() {
             </Link>
             <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/60">
               HAN Competitive Robotics is a student engineering team building featherweight combat
-              robots at HAN University of Applied Sciences, Netherlands.
+              robots at HAN, Netherlands.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -110,7 +110,7 @@ export function Footer() {
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#E5005B]" />
                 <span>
-                  HAN University of Applied Sciences
+                  HAN
                   <br />
                   Arnhem, Netherlands
                 </span>

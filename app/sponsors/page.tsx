@@ -98,7 +98,7 @@ const sponsorTiers = [
 
 const currentSponsors = [
   {
-    name: "HAN University of Applied Sciences",
+    name: "HAN",
     logo: "/sponsors/han-platinum.svg",
   },
   // Add more sponsors here as needed:

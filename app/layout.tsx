@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | HCR",
   },
   description:
-    "HAN Competitive Robotics (HCR) - A student engineering team building featherweight combat robots at HAN University of Applied Sciences, Netherlands.",
+    "HAN Competitive Robotics (HCR) - A student engineering team building featherweight combat robots at HAN, Netherlands.",
   keywords: [
     "HAN Competitive Robotics",
     "HCR",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "HAN Competitive Robotics",
     title: "HAN Competitive Robotics | Engineering Combat Robots",
     description:
-      "Student engineering team building featherweight combat robots at HAN University of Applied Sciences.",
+      "Student engineering team building featherweight combat robots at HAN.",
     images: [
       {
         url: "/og-image.jpg",

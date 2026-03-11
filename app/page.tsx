@@ -99,7 +99,7 @@ export default function HomePage() {
             <motion.div variants={fadeInUp}>
               <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 px-4 py-1.5 text-sm text-[#E5005B] hover:bg-[#E5005B]/20">
                 <Zap className="mr-1.5 h-3.5 w-3.5" />
-                HAN University of Applied Sciences
+                HAN
               </Badge>
             </motion.div>
 
