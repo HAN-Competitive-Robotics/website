@@ -442,15 +442,7 @@ export default function SponsorsPage() {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
-                    <a href="/sponsorship-prospectus.pdf" download className="w-full">
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="w-full border-white/20 py-6 text-white hover:bg-white/10"
-                      >
-                        Download Prospectus
-                      </Button>
-                    </a>
+
                   </div>
                 </div>
               </CardContent>
