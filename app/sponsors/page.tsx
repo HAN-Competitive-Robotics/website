@@ -393,65 +393,6 @@ export default function SponsorsPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Contact CTA Section */}
-      <section
-        id="contact"
-        className="bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-20"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl"
-          >
-            <Card className="overflow-hidden border-white/10 bg-[#141414]">
-              <CardContent className="p-8 sm:p-12">
-                <div className="grid items-center gap-12 md:grid-cols-2">
-                  <div>
-                    <Badge className="mb-4 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
-                      Get in Touch
-                    </Badge>
-                    <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
-                      Ready to <span className="text-gradient">Partner?</span>
-                    </h2>
-                    <p className="mb-6 text-white/60">
-                      Contact our sponsorship team to discuss how we can work together. We&apos;re
-                      happy to create custom packages that meet your needs.
-                    </p>
-                    <div className="space-y-3">
-                      <p className="text-white/70">
-                        <span className="font-medium text-white">Email:</span>{" "}
-                        <a href="mailto:hcr@han.nl" className="text-[#E5005B] hover:underline">
-                          hcr@han.nl
-                        </a>
-                      </p>
-                      <p className="text-white/70">
-                        <span className="font-medium text-white">Response time:</span> Within 48
-                        hours
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <Link href="/contact">
-                      <Button
-                        size="lg"
-                        className="w-full bg-[#E5005B] py-6 font-semibold text-white hover:bg-[#E5005B]/90"
-                      >
-                        Contact Sponsorship Team
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }
