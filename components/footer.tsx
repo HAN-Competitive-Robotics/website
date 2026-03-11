@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Zap, Mail, MapPin, Instagram, Linkedin, Github } from "lucide-react";
+import { Zap, Mail, MapPin, Linkedin, Github } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
@@ -23,9 +23,8 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram", icon: Instagram },
-  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
-  { href: "https://github.com", label: "GitHub", icon: Github },
+  { href: "https://www.linkedin.com/company/han-competitive-robotics", label: "LinkedIn", icon: Linkedin },
+  { href: "https://github.com/HAN-Competitive-Robotics", label: "GitHub", icon: Github },
 ];
 
 export function Footer() {
