@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Zap, Cpu, Wrench, Users, ChevronRight } from "lucide-react";
+import { ArrowRight, Zap, Cpu, Wrench, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,11 +41,7 @@ const divisions = [
     description:
       "Custom PCB design, firmware development, and real-time control systems for combat robotics.",
   },
-  {
-    icon: Users,
-    title: "Operations & Management",
-    description: "Project management, sponsor relations, event coordination, and team logistics.",
-  },
+
 ];
 
 const updates = [
