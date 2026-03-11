@@ -45,16 +45,10 @@ const benefits = [
 const currentSponsors = [
   {
     name: "HAN University of Applied Sciences",
-    tier: "Platinum",
     logo: "/sponsors/han-platinum.svg",
   },
-  { name: "Gold Sponsor 1", tier: "Gold", logo: "/sponsors/gold-1.svg" },
-  { name: "Gold Sponsor 2", tier: "Gold", logo: "/sponsors/gold-2.svg" },
-  { name: "Silver Sponsor 1", tier: "Silver", logo: "/sponsors/silver-1.svg" },
-  { name: "Silver Sponsor 2", tier: "Silver", logo: "/sponsors/silver-2.svg" },
-  { name: "Silver Sponsor 3", tier: "Silver", logo: "/sponsors/silver-3.svg" },
-  { name: "Supporter 1", tier: "Supporter", logo: "/sponsors/supporter-1.svg" },
-  { name: "Supporter 2", tier: "Supporter", logo: "/sponsors/supporter-2.svg" },
+  // Add more sponsors here as needed:
+  // { name: "Company Name", logo: "/sponsors/company-logo.svg" },
 ];
 
 export default function SponsorsPage() {
@@ -83,27 +77,27 @@ export default function SponsorsPage() {
             </p>
           </motion.div>
 
-          {/* HAN University Sponsor */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <Card className="mx-auto max-w-xl border-[#E5005B]/20 bg-[#141414]">
-              <CardContent className="flex items-center gap-6 p-8">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#E5005B]/10">
-                  <Sparkles className="h-8 w-8 text-[#E5005B]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">
-                    HAN University of Applied Sciences
-                  </h3>
-                  <p className="mt-1 text-sm text-white/50">Official educational partner</p>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+          {/* Sponsors Grid */}
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {currentSponsors.map((sponsor, index) => (
+              <motion.div
+                key={sponsor.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
+                  <CardContent className="flex flex-col items-center justify-center p-8 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-xl bg-[#E5005B]/10">
+                      <Sparkles className="h-10 w-10 text-[#E5005B]" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white">{sponsor.name}</h3>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
