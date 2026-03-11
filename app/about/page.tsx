@@ -402,7 +402,7 @@ export default function AboutPage() {
                 {
                   stat: "250+",
                   unit: "g",
-                  label: "Energy in a spinning active element",
+                  label: "Energy in a spinning kinetic system",
                 },
                 {
                   stat: "3",

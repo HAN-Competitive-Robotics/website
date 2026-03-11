@@ -27,7 +27,7 @@ const divisions = [
     icon: Wrench,
     title: "Mechanical Engineering",
     description:
-      "CAD design, structural analysis, and manufacturing of robot chassis and active elements.",
+      "CAD design, structural analysis, and manufacturing of robot chassis and kinetic systems.",
   },
   {
     icon: Zap,
@@ -274,9 +274,9 @@ export default function HomePage() {
                   "Control systems, motor drivers, and power management for demanding conditions.",
               },
               {
-                title: "Active Systems",
+                title: "Kinetic Systems",
                 description:
-                  "High energy active elements including drums, spinners, and hammers for competitive use.",
+                  "High energy kinetic systems including drums, spinners, and hammers for competitive use.",
               },
             ].map((item, index) => (
               <motion.div

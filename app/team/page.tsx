@@ -50,7 +50,7 @@ const teamSections = [
     id: "mechanical",
     title: "Mechanical Engineering",
     icon: Wrench,
-    description: "Designing and manufacturing the robot chassis, drive train, and active elements",
+    description: "Designing and manufacturing the robot chassis, drive train, and kinetic systems",
     members: [
       {
         name: "Rafiul Islam",
@@ -118,7 +118,7 @@ const teamSections = [
       },
       {
         name: "Luka Ponomarenko",
-        role: "Core & Active Firmware",
+        role: "Core & Kinetic Firmware",
         program: "Segmentation fault? I hardly know her",
         image: "/team/luka.png",
         initials: "LP",

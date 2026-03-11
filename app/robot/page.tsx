@@ -58,9 +58,9 @@ const subsystems = [
   },
   {
     icon: Hammer,
-    title: "Active System",
+    title: "Kinetic System",
     description:
-      "A high performance active element designed for competition use. The mechanism is built for reliability under heavy loads.",
+      "A high performance kinetic system designed for competition use. The mechanism is built for reliability under heavy loads.",
     features: [
       "High RPM brushless motor",
       "Hardened steel contact element",
