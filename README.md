@@ -4,7 +4,7 @@
 
 Official website for HAN Competitive Robotics - a student engineering team building featherweight combat robots at HAN University of Applied Sciences, Netherlands.
 
-🌐 **Live Site:** [https://hcr-han.nl](https://hcr-han.nl) *(update with your URL)*
+🌐 **Live Site:** [https://hcr-han.nl](https://hcr-han.nl) _(update with your URL)_
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)
@@ -109,12 +109,12 @@ Edit `app/sponsors/page.tsx` - modify the `currentSponsors` array.
 
 ## 🌈 Brand Colors
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| HAN Pink | `#E5005B` | Primary accent |
-| Pink Soft | `#FF6B9A` | Gradients |
-| Background | `#121212` | Main background |
-| Card | `#1A1A1A` | Card backgrounds |
+| Color      | Hex       | Usage            |
+| ---------- | --------- | ---------------- |
+| HAN Pink   | `#E5005B` | Primary accent   |
+| Pink Soft  | `#FF6B9A` | Gradients        |
+| Background | `#121212` | Main background  |
+| Card       | `#1A1A1A` | Card backgrounds |
 
 ## 🤝 Contributing
 

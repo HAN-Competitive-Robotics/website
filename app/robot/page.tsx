@@ -122,11 +122,11 @@ export default function RobotPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px] blur-glow" />
+      <section className="relative overflow-hidden py-16 lg:py-20">
+        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
+        <div className="blur-glow absolute top-0 left-0 h-1/2 w-1/2 rounded-full bg-[#E5005B]/10 blur-[200px]" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -134,35 +134,35 @@ export default function RobotPage() {
             className="max-w-4xl"
           >
             <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 bg-[#E5005B]/10 text-[#E5005B] border-[#E5005B]/20">
-                <Zap className="w-3.5 h-3.5 mr-1.5" />
+              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
+                <Zap className="mr-1.5 h-3.5 w-3.5" />
                 Meet HCR-1
               </Badge>
             </motion.div>
 
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             >
               The <span className="text-gradient">Robot</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-white/70 leading-relaxed max-w-3xl"
+              className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HCR-1 is our first featherweight combat robot, designed and built
-              entirely by HAN University students. Every component has been
-              engineered for maximum performance within competition limits.
+              HCR-1 is our first featherweight combat robot, designed and built entirely by HAN
+              University students. Every component has been engineered for maximum performance
+              within competition limits.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Robot Overview */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Robot Render/Placeholder */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -171,23 +171,19 @@ export default function RobotPage() {
               transition={{ duration: 0.6 }}
               className="relative order-2 lg:order-1"
             >
-              <div className="aspect-square rounded-2xl overflow-hidden relative">
-                <img 
+              <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <img
                   src="https://images.unsplash.com/photo-1563178406-4f8025767818?w=800&h=800&fit=crop"
                   alt="HCR-1 Combat Robot"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent" />
                 {/* Technical overlay elements */}
-                <div className="absolute top-4 left-4 px-3 py-1 bg-black/50 rounded-full border border-white/10">
-                  <span className="text-xs text-white/60 font-mono">
-                    v1.0.0
-                  </span>
+                <div className="absolute top-4 left-4 rounded-full border border-white/10 bg-black/50 px-3 py-1">
+                  <span className="font-mono text-xs text-white/60">v1.0.0</span>
                 </div>
-                <div className="absolute bottom-4 right-4 px-3 py-1 bg-black/50 rounded-full border border-white/10">
-                  <span className="text-xs text-[#E5005B] font-mono">
-                    FEATHERWEIGHT
-                  </span>
+                <div className="absolute right-4 bottom-4 rounded-full border border-white/10 bg-black/50 px-3 py-1">
+                  <span className="font-mono text-xs text-[#E5005B]">FEATHERWEIGHT</span>
                 </div>
               </div>
             </motion.div>
@@ -200,30 +196,27 @@ export default function RobotPage() {
               transition={{ duration: 0.6 }}
               className="order-1 lg:order-2"
             >
-              <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-                Overview
-              </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Overview</Badge>
+              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
                 Designed for <span className="text-gradient">Combat</span>
               </h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
+              <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  HCR-1 represents our team&apos;s first entry into competitive
-                  combat robotics. Built from the ground up using advanced
-                  engineering principles and manufacturing techniques, this robot
-                  embodies everything we&apos;ve learned as a team.
+                  HCR-1 represents our team&apos;s first entry into competitive combat robotics.
+                  Built from the ground up using advanced engineering principles and manufacturing
+                  techniques, this robot embodies everything we&apos;ve learned as a team.
                 </p>
                 <p>
-                  The design prioritizes durability and repairability—key factors
-                  in combat robotics where damage is inevitable. Every component
-                  is accessible for quick repairs between matches, and the modular
-                  architecture allows for rapid iteration and improvement.
+                  The design prioritizes durability and repairability—key factors in combat robotics
+                  where damage is inevitable. Every component is accessible for quick repairs
+                  between matches, and the modular architecture allows for rapid iteration and
+                  improvement.
                 </p>
                 <p>
-                  Under the hood, HCR-1 features custom electronics designed
-                  specifically for the demands of robotic combat. From the power
-                  distribution system to the motor controllers, every circuit has
-                  been optimized for reliability under extreme conditions.
+                  Under the hood, HCR-1 features custom electronics designed specifically for the
+                  demands of robotic combat. From the power distribution system to the motor
+                  controllers, every circuit has been optimized for reliability under extreme
+                  conditions.
                 </p>
               </div>
 
@@ -234,13 +227,13 @@ export default function RobotPage() {
                     className="border-white/20 text-white hover:bg-white/10"
                   >
                     View Specifications
-                    <ChevronRight className="ml-2 w-4 h-4" />
+                    <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="#subsystems">
                   <Button
                     variant="ghost"
-                    className="text-[#E5005B] hover:text-[#E5005B]/80 hover:bg-[#E5005B]/10"
+                    className="text-[#E5005B] hover:bg-[#E5005B]/10 hover:text-[#E5005B]/80"
                   >
                     Explore Subsystems
                   </Button>
@@ -252,24 +245,23 @@ export default function RobotPage() {
       </section>
 
       {/* Specifications Table */}
-      <section id="specs" className="py-16 bg-[#0a0a0a]">
+      <section id="specs" className="bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
               Technical Details
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Robot <span className="text-gradient">Specifications</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              Detailed technical specifications for HCR-1, our featherweight
-              combat robot.
+            <p className="text-lg text-white/60">
+              Detailed technical specifications for HCR-1, our featherweight combat robot.
             </p>
           </motion.div>
 
@@ -279,7 +271,7 @@ export default function RobotPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="bg-[#141414] border-white/10 overflow-hidden">
+            <Card className="overflow-hidden border-white/10 bg-[#141414]">
               <CardContent className="p-0">
                 <div className="overflow-x-auto">
                   <table className="w-full">
@@ -291,20 +283,14 @@ export default function RobotPage() {
                             index % 2 === 0 ? "bg-white/[0.02]" : ""
                           }`}
                         >
-                          <td className="py-5 px-6 sm:px-8">
-                            <span className="text-white/50 font-medium">
-                              {spec.label}
-                            </span>
+                          <td className="px-6 py-5 sm:px-8">
+                            <span className="font-medium text-white/50">{spec.label}</span>
                           </td>
-                          <td className="py-5 px-6 sm:px-8">
-                            <span className="text-white font-semibold text-lg">
-                              {spec.value}
-                            </span>
+                          <td className="px-6 py-5 sm:px-8">
+                            <span className="text-lg font-semibold text-white">{spec.value}</span>
                           </td>
-                          <td className="py-5 px-6 sm:px-8 hidden sm:table-cell">
-                            <span className="text-white/40 text-sm">
-                              {spec.detail}
-                            </span>
+                          <td className="hidden px-6 py-5 sm:table-cell sm:px-8">
+                            <span className="text-sm text-white/40">{spec.detail}</span>
                           </td>
                         </tr>
                       ))}
@@ -318,28 +304,26 @@ export default function RobotPage() {
       </section>
 
       {/* Subsystems */}
-      <section id="subsystems" className="py-16 bg-[#0f0f0f]">
+      <section id="subsystems" className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Engineering
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Engineering</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Robot <span className="text-gradient">Subsystems</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              A closer look at the engineering that powers HCR-1, from drive
-              systems to weapon mechanics.
+            <p className="text-lg text-white/60">
+              A closer look at the engineering that powers HCR-1, from drive systems to weapon
+              mechanics.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {subsystems.map((system, index) => (
               <motion.div
                 key={system.title}
@@ -348,25 +332,20 @@ export default function RobotPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full hover:border-[#E5005B]/30 transition-all duration-300 group">
+                <Card className="group h-full border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-[#E5005B]/10 flex items-center justify-center mb-4 group-hover:bg-[#E5005B]/20 transition-colors">
-                      <system.icon className="w-6 h-6 text-[#E5005B]" />
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#E5005B]/10 transition-colors group-hover:bg-[#E5005B]/20">
+                      <system.icon className="h-6 w-6 text-[#E5005B]" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {system.title}
-                    </h3>
-                    <p className="text-white/60 text-sm leading-relaxed mb-4">
+                    <h3 className="mb-3 text-xl font-bold text-white">{system.title}</h3>
+                    <p className="mb-4 text-sm leading-relaxed text-white/60">
                       {system.description}
                     </p>
-                    <Separator className="bg-white/10 my-4" />
+                    <Separator className="my-4 bg-white/10" />
                     <ul className="space-y-2">
                       {system.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="text-white/50 text-sm flex items-start gap-2"
-                        >
-                          <span className="w-1 h-1 rounded-full bg-[#E5005B] mt-1.5 shrink-0" />
+                        <li key={feature} className="flex items-start gap-2 text-sm text-white/50">
+                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#E5005B]" />
                           {feature}
                         </li>
                       ))}
@@ -380,41 +359,38 @@ export default function RobotPage() {
       </section>
 
       {/* CAD / Design Process */}
-      <section className="py-16 bg-[#0a0a0a]">
+      <section className="bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
                 Design Process
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
                 From CAD to <span className="text-gradient">Combat</span>
               </h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
+              <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  The journey from concept to competition robot involves
-                  countless hours of CAD modeling, simulation, and iterative
-                  prototyping. Our design process follows engineering best
-                  practices while maintaining the flexibility needed for rapid
+                  The journey from concept to competition robot involves countless hours of CAD
+                  modeling, simulation, and iterative prototyping. Our design process follows
+                  engineering best practices while maintaining the flexibility needed for rapid
                   innovation.
                 </p>
                 <p>
-                  We use industry-standard CAD software to model every component,
-                  allowing us to verify clearances, analyze stress distributions,
-                  and generate manufacturing drawings. Finite element analysis
-                  helps us optimize the chassis and weapon for strength-to-weight
-                  ratio.
+                  We use industry-standard CAD software to model every component, allowing us to
+                  verify clearances, analyze stress distributions, and generate manufacturing
+                  drawings. Finite element analysis helps us optimize the chassis and weapon for
+                  strength-to-weight ratio.
                 </p>
                 <p>
-                  Prototypes are created using 3D printing for quick iteration,
-                  followed by CNC machining for the final competition-grade
-                  components. This approach allows us to test and refine designs
-                  before committing to expensive manufacturing processes.
+                  Prototypes are created using 3D printing for quick iteration, followed by CNC
+                  machining for the final competition-grade components. This approach allows us to
+                  test and refine designs before committing to expensive manufacturing processes.
                 </p>
               </div>
             </motion.div>
@@ -426,11 +402,11 @@ export default function RobotPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img 
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
                   src="/robot/cad-design.jpg"
                   alt="CAD Design Process"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </motion.div>
@@ -439,28 +415,28 @@ export default function RobotPage() {
       </section>
 
       {/* Future Robots */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
               Future Development
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Future <span className="text-gradient">Robots</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              HCR-1 is just the beginning. We&apos;re already planning our next
-              generation of combat robots.
+            <p className="text-lg text-white/60">
+              HCR-1 is just the beginning. We&apos;re already planning our next generation of combat
+              robots.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
             {[
               {
                 name: "HCR-1",
@@ -483,17 +459,15 @@ export default function RobotPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card
-                  className={`border-white/10 h-full ${
+                  className={`h-full border-white/10 ${
                     robot.status === "Current"
-                      ? "bg-[#E5005B]/10 border-[#E5005B]/30"
+                      ? "border-[#E5005B]/30 bg-[#E5005B]/10"
                       : "bg-[#141414]"
                   }`}
                 >
                   <CardContent className="p-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-bold text-white">
-                        {robot.name}
-                      </h3>
+                    <div className="mb-4 flex items-center justify-between">
+                      <h3 className="text-2xl font-bold text-white">{robot.name}</h3>
                       <Badge
                         variant="outline"
                         className={
@@ -515,30 +489,30 @@ export default function RobotPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5">
+      <section className="bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Support <span className="text-gradient">HCR</span>
             </h2>
-            <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-              Partner with us to support student engineering and help us build
-              the next generation of HCR combat robots.
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
+              Partner with us to support student engineering and help us build the next generation
+              of HCR combat robots.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/sponsors">
                 <Button
                   size="lg"
-                  className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-8"
+                  className="bg-[#E5005B] px-8 font-semibold text-white hover:bg-[#E5005B]/90"
                 >
                   Become a Sponsor
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/contact">

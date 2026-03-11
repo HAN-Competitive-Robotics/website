@@ -44,8 +44,7 @@ const divisions = [
   {
     icon: Users,
     title: "Operations & Management",
-    description:
-      "Project management, sponsor relations, event coordination, and team logistics.",
+    description: "Project management, sponsor relations, event coordination, and team logistics.",
   },
 ];
 
@@ -87,13 +86,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-1/4 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[150px] blur-glow" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#E5005B]/5 rounded-full blur-[100px]" />
+        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
+        <div className="blur-glow absolute top-1/4 right-0 h-1/2 w-1/2 rounded-full bg-[#E5005B]/10 blur-[150px]" />
+        <div className="absolute bottom-0 left-0 h-1/3 w-1/3 rounded-full bg-[#E5005B]/5 blur-[100px]" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -102,8 +101,8 @@ export default function HomePage() {
           >
             {/* Badge */}
             <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 bg-[#E5005B]/10 text-[#E5005B] border-[#E5005B]/20 hover:bg-[#E5005B]/20 px-4 py-1.5 text-sm">
-                <Zap className="w-3.5 h-3.5 mr-1.5" />
+              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 px-4 py-1.5 text-sm text-[#E5005B] hover:bg-[#E5005B]/20">
+                <Zap className="mr-1.5 h-3.5 w-3.5" />
                 HAN University of Applied Sciences
               </Badge>
             </motion.div>
@@ -111,40 +110,36 @@ export default function HomePage() {
             {/* Main Title */}
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+              className="mb-6 text-5xl leading-tight font-bold text-white sm:text-6xl lg:text-7xl"
             >
-              HAN Competitive{" "}
-              <span className="text-gradient">Robotics</span>
+              HAN Competitive <span className="text-gradient">Robotics</span>
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
               variants={fadeInUp}
-              className="text-xl sm:text-2xl text-white/70 max-w-2xl mb-8"
+              className="mb-8 max-w-2xl text-xl text-white/70 sm:text-2xl"
             >
-              Engineering combat robots for European competitions. Built by
-              students, powered by passion.
+              Engineering combat robots for European competitions. Built by students, powered by
+              passion.
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col sm:flex-row gap-4"
-            >
+            <motion.div variants={fadeInUp} className="flex flex-col gap-4 sm:flex-row">
               <Link href="/team">
                 <Button
                   size="lg"
-                  className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-8 py-6 text-base group"
+                  className="group bg-[#E5005B] px-8 py-6 text-base font-semibold text-white hover:bg-[#E5005B]/90"
                 >
                   Meet the Team
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
               <Link href="/robot">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base"
+                  className="border-white/20 px-8 py-6 text-base font-semibold text-white hover:bg-white/10"
                 >
                   Our Robot
                 </Button>
@@ -153,7 +148,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="ghost"
-                  className="text-white/70 hover:text-white hover:bg-white/5 font-semibold px-8 py-6 text-base"
+                  className="px-8 py-6 text-base font-semibold text-white/70 hover:bg-white/5 hover:text-white"
                 >
                   Become a Sponsor
                 </Button>
@@ -163,19 +158,19 @@ export default function HomePage() {
             {/* Stats */}
             <motion.div
               variants={fadeInUp}
-              className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/10 max-w-xl"
+              className="mt-16 grid max-w-xl grid-cols-3 gap-8 border-t border-white/10 pt-8"
             >
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-white">13.6</div>
-                <div className="text-sm text-white/50 mt-1">kg Weight Class</div>
+                <div className="text-3xl font-bold text-white sm:text-4xl">13.6</div>
+                <div className="mt-1 text-sm text-white/50">kg Weight Class</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-white">11</div>
-                <div className="text-sm text-white/50 mt-1">Team Members</div>
+                <div className="text-3xl font-bold text-white sm:text-4xl">11</div>
+                <div className="mt-1 text-sm text-white/50">Team Members</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-white">2025</div>
-                <div className="text-sm text-white/50 mt-1">Founded</div>
+                <div className="text-3xl font-bold text-white sm:text-4xl">2025</div>
+                <div className="mt-1 text-sm text-white/50">Founded</div>
               </div>
             </motion.div>
           </motion.div>
@@ -188,68 +183,65 @@ export default function HomePage() {
           transition={{ delay: 1.5 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
-          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-1.5">
+          <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/20 p-1.5">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-[#E5005B] rounded-full"
+              className="h-1.5 w-1.5 rounded-full bg-[#E5005B]"
             />
           </div>
         </motion.div>
       </section>
 
       {/* What is HCR Section */}
-      <section className="py-16 bg-[#0a0a0a] relative">
+      <section className="relative bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+            className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"
           >
             {/* Content */}
             <div>
-              <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-                About Us
-              </Badge>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">About Us</Badge>
+              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
                 What is <span className="text-gradient">HCR?</span>
               </h2>
-              <p className="text-white/70 text-lg leading-relaxed mb-6">
-                HAN Competitive Robotics (HCR) is a student engineering team at
-                HAN University of Applied Sciences in the Netherlands. We design,
-                build, and compete with featherweight combat robots in European
-                robotics competitions.
+              <p className="mb-6 text-lg leading-relaxed text-white/70">
+                HAN Competitive Robotics (HCR) is a student engineering team at HAN University of
+                Applied Sciences in the Netherlands. We design, build, and compete with
+                featherweight combat robots in European robotics competitions.
               </p>
-              <p className="text-white/60 leading-relaxed mb-8">
-                Our team brings together students from various engineering
-                disciplines including Embedded Systems Engineering and Mechanical
-                Engineering. Together, we push the boundaries of what&apos;s possible
-                in combat robotics while developing real-world engineering skills.
+              <p className="mb-8 leading-relaxed text-white/60">
+                Our team brings together students from various engineering disciplines including
+                Embedded Systems Engineering and Mechanical Engineering. Together, we push the
+                boundaries of what&apos;s possible in combat robotics while developing real-world
+                engineering skills.
               </p>
               <Link href="/about">
                 <Button
                   variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 group"
+                  className="group border-white/20 text-white hover:bg-white/10"
                 >
                   Learn More About Us
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
             </div>
 
             {/* Image/Visual */}
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden relative">
-                <img 
-                  src="/robot/workshop.jpg" 
+              <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <img
+                  src="/robot/workshop.jpg"
                   alt="Team working on robot"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/80 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white/80 text-sm">Team HCR at work</p>
+                <div className="absolute right-4 bottom-4 left-4">
+                  <p className="text-sm text-white/80">Team HCR at work</p>
                 </div>
               </div>
             </div>
@@ -258,29 +250,27 @@ export default function HomePage() {
       </section>
 
       {/* What We Build Section */}
-      <section className="py-16 bg-[#0f0f0f] relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern-light opacity-50" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative overflow-hidden bg-[#0f0f0f] py-16">
+        <div className="bg-grid-pattern-light absolute inset-0 opacity-50" />
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Our Work
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Work</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
               What We <span className="text-gradient">Build</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              From concept to combat-ready machine, we engineer every aspect of
-              our robots in-house at HAN University.
+            <p className="text-lg text-white/60">
+              From concept to combat-ready machine, we engineer every aspect of our robots in-house
+              at HAN University.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 title: "Combat Robots",
@@ -305,19 +295,13 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full hover:border-[#E5005B]/30 transition-colors duration-300">
+                <Card className="h-full border-white/10 bg-[#141414] transition-colors duration-300 hover:border-[#E5005B]/30">
                   <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg bg-[#E5005B]/10 flex items-center justify-center mb-6">
-                      <span className="text-2xl font-bold text-[#E5005B]">
-                        0{index + 1}
-                      </span>
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-[#E5005B]/10">
+                      <span className="text-2xl font-bold text-[#E5005B]">0{index + 1}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-white/60 leading-relaxed">
-                      {item.description}
-                    </p>
+                    <h3 className="mb-3 text-xl font-bold text-white">{item.title}</h3>
+                    <p className="leading-relaxed text-white/60">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -327,28 +311,26 @@ export default function HomePage() {
       </section>
 
       {/* Engineering Divisions */}
-      <section className="py-16 bg-[#0a0a0a] relative">
+      <section className="relative bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Team Structure
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Team Structure</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
               Engineering <span className="text-gradient">Divisions</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              Our team is organized into specialized divisions, each focusing on
-              critical aspects of robot development.
+            <p className="text-lg text-white/60">
+              Our team is organized into specialized divisions, each focusing on critical aspects of
+              robot development.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-3">
             {divisions.map((division, index) => (
               <motion.div
                 key={division.title}
@@ -357,17 +339,13 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full group hover:border-[#E5005B]/30 transition-all duration-300">
+                <Card className="group h-full border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
                   <CardContent className="p-8">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#E5005B]/20 to-[#E5005B]/5 flex items-center justify-center mb-6 group-hover:from-[#E5005B]/30 group-hover:to-[#E5005B]/10 transition-all duration-300">
-                      <division.icon className="w-7 h-7 text-[#E5005B]" />
+                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#E5005B]/20 to-[#E5005B]/5 transition-all duration-300 group-hover:from-[#E5005B]/30 group-hover:to-[#E5005B]/10">
+                      <division.icon className="h-7 w-7 text-[#E5005B]" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {division.title}
-                    </h3>
-                    <p className="text-white/60 leading-relaxed">
-                      {division.description}
-                    </p>
+                    <h3 className="mb-3 text-xl font-bold text-white">{division.title}</h3>
+                    <p className="leading-relaxed text-white/60">{division.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -377,35 +355,35 @@ export default function HomePage() {
       </section>
 
       {/* Latest Updates */}
-      <section className="py-16 bg-[#0f0f0f] relative">
+      <section className="relative bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12"
+            className="mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between"
           >
             <div>
-              <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
                 News & Updates
               </Badge>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
                 Latest <span className="text-gradient">Updates</span>
               </h2>
             </div>
             <Link href="#" className="mt-4 sm:mt-0">
               <Button
                 variant="ghost"
-                className="text-[#E5005B] hover:text-[#E5005B]/80 hover:bg-[#E5005B]/10 group"
+                className="group text-[#E5005B] hover:bg-[#E5005B]/10 hover:text-[#E5005B]/80"
               >
                 View All Updates
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-3">
             {updates.map((update, index) => (
               <motion.div
                 key={update.title}
@@ -414,28 +392,21 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full hover:border-white/20 transition-all duration-300 group cursor-pointer">
+                <Card className="group h-full cursor-pointer border-white/10 bg-[#141414] transition-all duration-300 hover:border-white/20">
                   <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Badge
-                        variant="outline"
-                        className="border-[#E5005B]/30 text-[#E5005B]"
-                      >
+                    <div className="mb-4 flex items-center gap-3">
+                      <Badge variant="outline" className="border-[#E5005B]/30 text-[#E5005B]">
                         {update.category}
                       </Badge>
-                      <span className="text-white/40 text-sm">
-                        {update.date}
-                      </span>
+                      <span className="text-sm text-white/40">{update.date}</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#E5005B] transition-colors">
+                    <h3 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#E5005B]">
                       {update.title}
                     </h3>
-                    <p className="text-white/60 text-sm leading-relaxed">
-                      {update.excerpt}
-                    </p>
-                    <div className="mt-4 flex items-center text-[#E5005B] text-sm font-medium">
+                    <p className="text-sm leading-relaxed text-white/60">{update.excerpt}</p>
+                    <div className="mt-4 flex items-center text-sm font-medium text-[#E5005B]">
                       Read More
-                      <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </CardContent>
                 </Card>
@@ -446,25 +417,23 @@ export default function HomePage() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="py-16 bg-[#0a0a0a] relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative bg-[#0a0a0a] py-16">
+        <div className="bg-grid-pattern absolute inset-0 opacity-20" />
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Our Partners
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Partners</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
               Proudly Supported <span className="text-gradient">By</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              Our sponsors make it possible to build competitive combat robots
-              and represent HAN University at European competitions.
+            <p className="text-lg text-white/60">
+              Our sponsors make it possible to build competitive combat robots and represent HAN
+              University at European competitions.
             </p>
           </motion.div>
 
@@ -474,17 +443,17 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12"
+            className="mb-12 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6"
           >
             {sponsors.map((sponsor) => (
               <div
                 key={sponsor.name}
-                className="aspect-[3/2] bg-[#1A1A1A] rounded-xl border border-white/10 flex items-center justify-center hover:border-[#E5005B]/30 transition-all duration-300 group overflow-hidden"
+                className="group flex aspect-[3/2] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#1A1A1A] transition-all duration-300 hover:border-[#E5005B]/30"
               >
-                <img 
+                <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
                 />
               </div>
             ))}
@@ -501,10 +470,10 @@ export default function HomePage() {
             <Link href="/sponsors">
               <Button
                 size="lg"
-                className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-8"
+                className="bg-[#E5005B] px-8 font-semibold text-white hover:bg-[#E5005B]/90"
               >
                 Become a Sponsor
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </motion.div>
@@ -512,39 +481,38 @@ export default function HomePage() {
       </section>
 
       {/* Learn More CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-20">
+        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Interested in{" "}
-              <span className="text-gradient">Combat Robotics?</span>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              Interested in <span className="text-gradient">Combat Robotics?</span>
             </h2>
-            <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-              Learn more about HAN Competitive Robotics and how we&apos;re pushing
-              the boundaries of student engineering at HAN University.
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
+              Learn more about HAN Competitive Robotics and how we&apos;re pushing the boundaries of
+              student engineering at HAN University.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/about">
                 <Button
                   size="lg"
-                  className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-8 py-6 text-base"
+                  className="bg-[#E5005B] px-8 py-6 text-base font-semibold text-white hover:bg-[#E5005B]/90"
                 >
                   Learn More About Us
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base"
+                  className="border-white/20 px-8 py-6 text-base font-semibold text-white hover:bg-white/10"
                 >
                   Contact Us
                 </Button>

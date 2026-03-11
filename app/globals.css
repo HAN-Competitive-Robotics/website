@@ -67,31 +67,31 @@
   --card-foreground: #f8fafc;
   --popover: #141414;
   --popover-foreground: #f8fafc;
-  --primary: #E5005B;
+  --primary: #e5005b;
   --primary-foreground: #ffffff;
-  --secondary: #1A1A1A;
+  --secondary: #1a1a1a;
   --secondary-foreground: #f8fafc;
-  --muted: #1E1E1E;
+  --muted: #1e1e1e;
   --muted-foreground: #a1a1aa;
-  --accent: #E5005B;
+  --accent: #e5005b;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.15);
-  --ring: #E5005B;
-  --chart-1: #E5005B;
-  --chart-2: #FF6B9A;
-  --chart-3: #9B7ED9;
+  --ring: #e5005b;
+  --chart-1: #e5005b;
+  --chart-2: #ff6b9a;
+  --chart-3: #9b7ed9;
   --chart-4: #06b6d4;
   --chart-5: #f59e0b;
   --sidebar: #0a0a0a;
   --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #E5005B;
+  --sidebar-primary: #e5005b;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1A1A1A;
+  --sidebar-accent: #1a1a1a;
   --sidebar-accent-foreground: #f8fafc;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #E5005B;
+  --sidebar-ring: #e5005b;
 }
 
 @layer base {
@@ -114,40 +114,40 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #E5005B 0%, #FF6B9A 50%, #F5A5C5 100%);
+    background-image: linear-gradient(135deg, #e5005b 0%, #ff6b9a 50%, #f5a5c5 100%);
   }
-  
+
   .text-gradient-purple {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #9B7ED9 0%, #B8A0E8 100%);
+    background-image: linear-gradient(135deg, #9b7ed9 0%, #b8a0e8 100%);
   }
-  
+
   .bg-grid-pattern {
-    background-image: 
+    background-image:
       linear-gradient(rgba(232, 93, 154, 0.025) 1px, transparent 1px),
       linear-gradient(90deg, rgba(232, 93, 154, 0.025) 1px, transparent 1px);
     background-size: 40px 40px;
   }
-  
+
   .bg-grid-pattern-light {
-    background-image: 
+    background-image:
       linear-gradient(rgba(232, 93, 154, 0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(232, 93, 154, 0.04) 1px, transparent 1px);
     background-size: 24px 24px;
   }
-  
+
   /* Scroll performance optimizations */
   .scroll-section {
     content-visibility: auto;
     contain-intrinsic-size: 0 500px;
   }
-  
+
   /* GPU acceleration for animated elements */
   .gpu-accelerated {
     will-change: transform;
     transform: translateZ(0);
   }
-  
+
   /* Optimize blur effects during scroll */
   .blur-glow {
     will-change: transform;
@@ -161,7 +161,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   /* Enable momentum scrolling on iOS */
   body {
     -webkit-overflow-scrolling: touch;
@@ -173,7 +173,7 @@
   html {
     scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -197,7 +197,8 @@
 }
 
 /* Prevent layout shifts */
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%;
 }

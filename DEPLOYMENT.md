@@ -56,6 +56,7 @@ git push -u origin main
 ## ⚙️ Vercel Configuration
 
 The project includes:
+
 - `vercel.json` - Vercel-specific settings
 - `next.config.ts` - Next.js config with static export
 - `.gitignore` - Excludes build files and node_modules
@@ -75,12 +76,14 @@ Settings → Environment Variables
 ## 🔄 Auto-Deploy
 
 With GitHub integration:
+
 - Every push to `main` branch auto-deploys to production
 - Pull requests get preview deployments
 
 ## 📊 Build Settings
 
 Vercel should auto-detect these settings:
+
 - **Framework Preset:** Next.js
 - **Build Command:** `npm run build`
 - **Output Directory:** `out`

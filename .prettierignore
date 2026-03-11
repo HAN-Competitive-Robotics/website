@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+
+# Build outputs
+.next
+out
+
+# Package files
+package-lock.json
+
+# Generated files
+*.generated.*
+
+# Misc
+.DS_Store

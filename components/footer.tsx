@@ -23,36 +23,35 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { href: "https://www.linkedin.com/company/han-competitive-robotics", label: "LinkedIn", icon: Linkedin },
+  {
+    href: "https://www.linkedin.com/company/han-competitive-robotics",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
   { href: "https://github.com/HAN-Competitive-Robotics", label: "GitHub", icon: Github },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+    <footer className="border-t border-white/10 bg-[#0a0a0a]">
+      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 lg:gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg overflow-hidden">
-                <img 
-                  src="/images/logo.png" 
-                  alt="HCR Logo" 
-                  className="w-full h-full object-cover"
-                />
+            <Link href="/" className="mb-6 flex items-center gap-2">
+              <div className="h-10 w-10 overflow-hidden rounded-lg">
+                <img src="/images/logo.png" alt="HCR Logo" className="h-full w-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-white">HCR</span>
-                <span className="text-xs text-white/50 uppercase tracking-wider">
+                <span className="text-xs tracking-wider text-white/50 uppercase">
                   HAN Competitive Robotics
                 </span>
               </div>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed max-w-sm mb-6">
-              HAN Competitive Robotics is a student engineering team building
-              featherweight combat robots at HAN University of Applied Sciences,
-              Netherlands.
+            <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/60">
+              HAN Competitive Robotics is a student engineering team building featherweight combat
+              robots at HAN University of Applied Sciences, Netherlands.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -61,10 +60,10 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-white/60 hover:bg-[#E5005B]/20 hover:text-[#E5005B] transition-all duration-200"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-white/60 transition-all duration-200 hover:bg-[#E5005B]/20 hover:text-[#E5005B]"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="h-5 w-5" />
                 </a>
               ))}
             </div>
@@ -72,13 +71,13 @@ export function Footer() {
 
           {/* Team Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Team</h4>
+            <h4 className="mb-4 font-semibold text-white">Team</h4>
             <ul className="space-y-3">
               {footerLinks.team.map((link) => (
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-[#E5005B] text-sm transition-colors duration-200"
+                    className="text-sm text-white/60 transition-colors duration-200 hover:text-[#E5005B]"
                   >
                     {link.label}
                   </Link>
@@ -89,13 +88,13 @@ export function Footer() {
 
           {/* Sponsors Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Sponsors</h4>
+            <h4 className="mb-4 font-semibold text-white">Sponsors</h4>
             <ul className="space-y-3">
               {footerLinks.sponsors.map((link) => (
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-[#E5005B] text-sm transition-colors duration-200"
+                    className="text-sm text-white/60 transition-colors duration-200 hover:text-[#E5005B]"
                   >
                     {link.label}
                   </Link>
@@ -106,10 +105,10 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <h4 className="mb-4 font-semibold text-white">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-white/60 text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#E5005B]" />
+              <li className="flex items-start gap-3 text-sm text-white/60">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#E5005B]" />
                 <span>
                   HAN University of Applied Sciences
                   <br />
@@ -119,9 +118,9 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:hcr@han.nl"
-                  className="flex items-center gap-3 text-white/60 hover:text-[#E5005B] text-sm transition-colors duration-200"
+                  className="flex items-center gap-3 text-sm text-white/60 transition-colors duration-200 hover:text-[#E5005B]"
                 >
-                  <Mail className="w-4 h-4 shrink-0 text-[#E5005B]" />
+                  <Mail className="h-4 w-4 shrink-0 text-[#E5005B]" />
                   <span>hcr@han.nl</span>
                 </a>
               </li>
@@ -132,10 +131,9 @@ export function Footer() {
         <Separator className="my-8 bg-white/10" />
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} HAN Competitive Robotics. All rights
-            reserved.
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <p className="text-center text-sm text-white/40 sm:text-left">
+            © {new Date().getFullYear()} HAN Competitive Robotics. All rights reserved.
           </p>
         </div>
       </div>

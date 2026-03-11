@@ -105,11 +105,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px] blur-glow" />
+      <section className="relative overflow-hidden py-16 lg:py-20">
+        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
+        <div className="blur-glow absolute top-0 right-0 h-1/2 w-1/2 rounded-full bg-[#E5005B]/10 blur-[200px]" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -117,69 +117,61 @@ export default function AboutPage() {
             className="max-w-4xl"
           >
             <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 bg-[#E5005B]/10 text-[#E5005B] border-[#E5005B]/20">
+              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
                 About HCR
               </Badge>
             </motion.div>
 
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             >
-              Engineering Excellence at{" "}
-              <span className="text-gradient">HAN University</span>
+              Engineering Excellence at <span className="text-gradient">HAN University</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-white/70 leading-relaxed max-w-3xl"
+              className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HAN Competitive Robotics (HCR) is a student engineering team
-              building featherweight combat robots for competitions across
-              Europe. We bring together passionate students from various
-              engineering disciplines to push the boundaries of robotic combat.
+              HAN Competitive Robotics (HCR) is a student engineering team building featherweight
+              combat robots for competitions across Europe. We bring together passionate students
+              from various engineering disciplines to push the boundaries of robotic combat.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* What is HCR Section */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-                Our Story
-              </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                What is HAN Competitive{" "}
-                <span className="text-gradient">Robotics?</span>
+              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Story</Badge>
+              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
+                What is HAN Competitive <span className="text-gradient">Robotics?</span>
               </h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
+              <div className="space-y-4 leading-relaxed text-white/70">
                 <p>
-                  HCR is a student team at HAN University of Applied Sciences
-                  dedicated to the design, manufacture, and competition of
-                  featherweight combat robots. Founded in 2025, our team
-                  represents the university at robotic combat events throughout
+                  HCR is a student team at HAN University of Applied Sciences dedicated to the
+                  design, manufacture, and competition of featherweight combat robots. Founded in
+                  2025, our team represents the university at robotic combat events throughout
                   Europe.
                 </p>
                 <p>
-                  We compete in the featherweight class (≤13.6 kg), where our
-                  robots face off against other student and hobbyist teams in a
-                  test of engineering skill, driving ability, and strategic
-                  thinking.
+                  We compete in the featherweight class (≤13.6 kg), where our robots face off
+                  against other student and hobbyist teams in a test of engineering skill, driving
+                  ability, and strategic thinking.
                 </p>
                 <p>
-                  Our team comprises students from programs including Embedded
-                  Systems Engineering, Mechanical Engineering, and related
-                  technical fields. This multidisciplinary approach allows us to
-                  tackle every aspect of robot development, from initial concept
-                  to competitive deployment.
+                  Our team comprises students from programs including Embedded Systems Engineering,
+                  Mechanical Engineering, and related technical fields. This multidisciplinary
+                  approach allows us to tackle every aspect of robot development, from initial
+                  concept to competitive deployment.
                 </p>
               </div>
             </motion.div>
@@ -191,11 +183,11 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img 
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
                   src="/about/team-workshop.jpg"
                   alt="Team Workshop"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </motion.div>
@@ -204,29 +196,26 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 bg-[#0a0a0a]">
+      <section className="bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Our Mission
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Mission</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Why We <span className="text-gradient">Exist</span>
             </h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
-              Our mission is to provide HAN University students with hands-on
-              engineering experience through the exciting world of combat
-              robotics. We believe that building robots that can survive the
-              arena teaches lessons that no classroom can match.
+            <p className="mb-8 text-lg leading-relaxed text-white/70">
+              Our mission is to provide HAN University students with hands-on engineering experience
+              through the exciting world of combat robotics. We believe that building robots that
+              can survive the arena teaches lessons that no classroom can match.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-8 mt-12">
+            <div className="mt-12 grid gap-8 sm:grid-cols-3">
               {[
                 {
                   icon: Target,
@@ -255,13 +244,11 @@ export default function AboutPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-[#E5005B]/10 flex items-center justify-center">
-                    <item.icon className="w-8 h-8 text-[#E5005B]" />
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-[#E5005B]/10">
+                    <item.icon className="h-8 w-8 text-[#E5005B]" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/60 text-sm">{item.description}</p>
+                  <h3 className="mb-2 text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="text-sm text-white/60">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -270,28 +257,28 @@ export default function AboutPage() {
       </section>
 
       {/* What Students Learn */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
               Skills Development
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               What Students <span className="text-gradient">Learn</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              Joining HCR provides practical experience that complements academic
-              learning and prepares students for engineering careers.
+            <p className="text-lg text-white/60">
+              Joining HCR provides practical experience that complements academic learning and
+              prepares students for engineering careers.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {learningOutcomes.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -300,17 +287,13 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full hover:border-[#E5005B]/30 transition-all duration-300 group">
+                <Card className="group h-full border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-[#E5005B]/10 flex items-center justify-center mb-4 group-hover:bg-[#E5005B]/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-[#E5005B]" />
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#E5005B]/10 transition-colors group-hover:bg-[#E5005B]/20">
+                      <item.icon className="h-6 w-6 text-[#E5005B]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-white/60 text-sm leading-relaxed">
-                      {item.description}
-                    </p>
+                    <h3 className="mb-2 text-lg font-semibold text-white">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-white/60">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -320,28 +303,26 @@ export default function AboutPage() {
       </section>
 
       {/* Team Structure */}
-      <section className="py-16 bg-[#0a0a0a]">
+      <section className="bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Organization
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Organization</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Team <span className="text-gradient">Structure</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              HCR is organized into specialized divisions, each led by experienced
-              students and focused on specific aspects of our robot development.
+            <p className="text-lg text-white/60">
+              HCR is organized into specialized divisions, each led by experienced students and
+              focused on specific aspects of our robot development.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {teamStructure.map((division, index) => (
               <motion.div
                 key={division.title}
@@ -350,25 +331,17 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full">
+                <Card className="h-full border-white/10 bg-[#141414]">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {division.title}
-                    </h3>
-                    <Badge
-                      variant="outline"
-                      className="mb-4 border-[#E5005B]/30 text-[#E5005B]"
-                    >
+                    <h3 className="mb-2 text-xl font-bold text-white">{division.title}</h3>
+                    <Badge variant="outline" className="mb-4 border-[#E5005B]/30 text-[#E5005B]">
                       {division.members}
                     </Badge>
-                    <Separator className="bg-white/10 my-4" />
+                    <Separator className="my-4 bg-white/10" />
                     <ul className="space-y-2">
                       {division.responsibilities.map((resp) => (
-                        <li
-                          key={resp}
-                          className="text-white/60 text-sm flex items-start gap-2"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#E5005B] mt-1.5 shrink-0" />
+                        <li key={resp} className="flex items-start gap-2 text-sm text-white/60">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#E5005B]" />
                           {resp}
                         </li>
                       ))}
@@ -382,39 +355,35 @@ export default function AboutPage() {
       </section>
 
       {/* Why Combat Robotics */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-                The Sport
-              </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">The Sport</Badge>
+              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
                 Why Combat <span className="text-gradient">Robotics?</span>
               </h2>
-              <div className="space-y-6 text-white/70 leading-relaxed">
+              <div className="space-y-6 leading-relaxed text-white/70">
                 <p>
-                  Combat robotics is more than just destruction—it&apos;s a test of
-                  engineering under extreme conditions. When two robots enter the
-                  arena, every design decision is put to the ultimate test.
+                  Combat robotics is more than just destruction—it&apos;s a test of engineering
+                  under extreme conditions. When two robots enter the arena, every design decision
+                  is put to the ultimate test.
                 </p>
                 <p>
-                  The sport demands excellence in mechanical design, electrical
-                  engineering, and control systems. A robot must survive impacts
-                  that would destroy ordinary machines while delivering enough
-                  force to disable opponents. This requires innovative thinking,
-                  careful material selection, and precision manufacturing.
+                  The sport demands excellence in mechanical design, electrical engineering, and
+                  control systems. A robot must survive impacts that would destroy ordinary machines
+                  while delivering enough force to disable opponents. This requires innovative
+                  thinking, careful material selection, and precision manufacturing.
                 </p>
                 <p>
-                  For students, combat robotics provides unparalleled learning
-                  opportunities. The tight integration of mechanical and
-                  electronic systems, combined with the pressure of competition,
-                  accelerates skill development in ways traditional coursework
+                  For students, combat robotics provides unparalleled learning opportunities. The
+                  tight integration of mechanical and electronic systems, combined with the pressure
+                  of competition, accelerates skill development in ways traditional coursework
                   cannot match.
                 </p>
               </div>
@@ -451,9 +420,9 @@ export default function AboutPage() {
               ].map((item, index) => (
                 <div
                   key={item.label}
-                  className="flex items-center gap-6 p-6 bg-[#141414] rounded-xl border border-white/10"
+                  className="flex items-center gap-6 rounded-xl border border-white/10 bg-[#141414] p-6"
                 >
-                  <div className="text-4xl sm:text-5xl font-bold text-gradient">
+                  <div className="text-gradient text-4xl font-bold sm:text-5xl">
                     {item.stat}
                     <span className="text-2xl text-white/60">{item.unit}</span>
                   </div>
@@ -466,30 +435,30 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5">
+      <section className="bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Want to Learn <span className="text-gradient">More?</span>
             </h2>
-            <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-              Discover more about our team, our robot, and how HCR brings together
-              students from across HAN University to build competitive combat robots.
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
+              Discover more about our team, our robot, and how HCR brings together students from
+              across HAN University to build competitive combat robots.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/team">
                 <Button
                   size="lg"
-                  className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-8"
+                  className="bg-[#E5005B] px-8 font-semibold text-white hover:bg-[#E5005B]/90"
                 >
                   Meet the Team
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/robot">

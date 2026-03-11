@@ -55,7 +55,7 @@ const teamSections = [
     members: [
       {
         name: "Vishaal Girish Gopala Krishnan",
-        role: "Drive Train Lead",
+        role: "Drive Train",
         program: "Making things spin since day one",
         image: "/team/vishaal.png",
         initials: "VG",
@@ -164,31 +164,27 @@ function TeamMemberCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
     >
-      <Card className="bg-[#141414] border-white/10 hover:border-[#E5005B]/30 transition-all duration-300 group overflow-hidden">
+      <Card className="group overflow-hidden border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
             {/* Avatar */}
-            <div className="w-16 h-16 rounded-full border-2 border-white/10 group-hover:border-[#E5005B]/50 transition-colors bg-[#1E1E1E] overflow-hidden shrink-0">
+            <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-white/10 bg-[#1E1E1E] transition-colors group-hover:border-[#E5005B]/50">
               {member.image ? (
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
+                <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-[#E5005B]/10 text-[#E5005B] font-semibold text-lg">
+                <div className="flex h-full w-full items-center justify-center bg-[#E5005B]/10 text-lg font-semibold text-[#E5005B]">
                   {member.initials}
                 </div>
               )}
             </div>
 
             {/* Info */}
-            <div className="flex-1 min-w-0">
-              <h4 className="text-white font-semibold text-lg group-hover:text-[#E5005B] transition-colors truncate">
+            <div className="min-w-0 flex-1">
+              <h4 className="truncate text-lg font-semibold text-white transition-colors group-hover:text-[#E5005B]">
                 {member.name}
               </h4>
-              <p className="text-[#E5005B] text-sm font-medium">{member.role}</p>
-              <p className="text-white/50 text-sm mt-1">{member.program}</p>
+              <p className="text-sm font-medium text-[#E5005B]">{member.role}</p>
+              <p className="mt-1 text-sm text-white/50">{member.program}</p>
             </div>
           </div>
         </CardContent>
@@ -197,13 +193,7 @@ function TeamMemberCard({
   );
 }
 
-function TeamSection({
-  section,
-  index,
-}: {
-  section: (typeof teamSections)[0];
-  index: number;
-}) {
+function TeamSection({ section, index }: { section: (typeof teamSections)[0]; index: number }) {
   const Icon = section.icon;
 
   return (
@@ -216,24 +206,18 @@ function TeamSection({
       id={section.id}
     >
       <div className="mb-8">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 rounded-lg bg-[#E5005B]/10 flex items-center justify-center">
-            <Icon className="w-5 h-5 text-[#E5005B]" />
+        <div className="mb-3 flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#E5005B]/10">
+            <Icon className="h-5 w-5 text-[#E5005B]" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            {section.title}
-          </h2>
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">{section.title}</h2>
         </div>
-        <p className="text-white/60 ml-13 pl-13">{section.description}</p>
+        <p className="ml-13 pl-13 text-white/60">{section.description}</p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {section.members.map((member, memberIndex) => (
-          <TeamMemberCard
-            key={member.name}
-            member={member}
-            index={memberIndex}
-          />
+          <TeamMemberCard key={member.name} member={member} index={memberIndex} />
         ))}
       </div>
     </motion.section>
@@ -244,11 +228,11 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-[#121212]">
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px] blur-glow" />
+      <section className="relative overflow-hidden py-16 lg:py-20">
+        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
+        <div className="blur-glow absolute top-0 right-0 h-1/2 w-1/2 rounded-full bg-[#E5005B]/10 blur-[200px]" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -256,41 +240,40 @@ export default function TeamPage() {
             className="max-w-4xl"
           >
             <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 bg-[#E5005B]/10 text-[#E5005B] border-[#E5005B]/20">
-                <Users className="w-3.5 h-3.5 mr-1.5" />
+              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
+                <Users className="mr-1.5 h-3.5 w-3.5" />
                 Our Team
               </Badge>
             </motion.div>
 
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             >
               Meet the <span className="text-gradient">Team</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-white/70 leading-relaxed max-w-3xl"
+              className="max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              HCR is powered by dedicated students from HAN University. From
-              mechanical engineers to embedded systems specialists, our diverse
-              team brings together the skills needed to build competitive combat
-              robots.
+              HCR is powered by dedicated students from HAN University. From mechanical engineers to
+              embedded systems specialists, our diverse team brings together the skills needed to
+              build competitive combat robots.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Team Structure Overview */}
-      <section className="py-8 bg-[#1A1A1A] border-b border-white/10">
+      <section className="border-b border-white/10 bg-[#1A1A1A] py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-wrap gap-4 justify-center"
+            className="flex flex-wrap justify-center gap-4"
           >
             {teamSections.map((section) => {
               const Icon = section.icon;
@@ -298,9 +281,9 @@ export default function TeamPage() {
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#141414] border border-white/10 rounded-full text-white/70 hover:text-white hover:border-[#E5005B]/50 transition-all duration-200"
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-[#141414] px-4 py-2 text-white/70 transition-all duration-200 hover:border-[#E5005B]/50 hover:text-white"
                 >
-                  <Icon className="w-4 h-4 text-[#E5005B]" />
+                  <Icon className="h-4 w-4 text-[#E5005B]" />
                   <span className="text-sm font-medium">{section.title}</span>
                 </a>
               );
@@ -310,7 +293,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team Sections */}
-      <section className="py-8 bg-[#121212]">
+      <section className="bg-[#121212] py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {teamSections.map((section, index) => (
             <TeamSection key={section.id} section={section} index={index} />
@@ -319,30 +302,30 @@ export default function TeamPage() {
       </section>
 
       {/* Learn More CTA */}
-      <section className="py-24 bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5">
+      <section className="bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Explore <span className="text-gradient">HCR</span>
             </h2>
-            <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-              Discover what our team is working on and see how we&apos;re building
-              competitive combat robots here at HAN University.
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
+              Discover what our team is working on and see how we&apos;re building competitive
+              combat robots here at HAN University.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/robot">
                 <Button
                   size="lg"
-                  className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-8"
+                  className="bg-[#E5005B] px-8 font-semibold text-white hover:bg-[#E5005B]/90"
                 >
                   See Our Robot
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/contact">
@@ -358,8 +341,6 @@ export default function TeamPage() {
           </motion.div>
         </div>
       </section>
-
-
     </div>
   );
 }

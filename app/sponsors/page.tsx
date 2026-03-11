@@ -2,17 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  Zap,
-  Award,
-  Users,
-  Globe,
-  ArrowRight,
-  Check,
-  Sparkles,
-  Medal,
-  Star,
-} from "lucide-react";
+import { Zap, Award, Users, Globe, ArrowRight, Check, Sparkles, Medal, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -107,7 +97,11 @@ const sponsorTiers = [
 ];
 
 const currentSponsors = [
-  { name: "HAN University of Applied Sciences", tier: "Platinum", logo: "/sponsors/han-platinum.svg" },
+  {
+    name: "HAN University of Applied Sciences",
+    tier: "Platinum",
+    logo: "/sponsors/han-platinum.svg",
+  },
   { name: "Gold Sponsor 1", tier: "Gold", logo: "/sponsors/gold-1.svg" },
   { name: "Gold Sponsor 2", tier: "Gold", logo: "/sponsors/gold-2.svg" },
   { name: "Silver Sponsor 1", tier: "Silver", logo: "/sponsors/silver-1.svg" },
@@ -121,52 +115,48 @@ export default function SponsorsPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-[#E5005B]/10 rounded-full blur-[200px] blur-glow" />
+      <section className="relative overflow-hidden py-16 lg:py-20">
+        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
+        <div className="blur-glow absolute top-0 left-1/2 h-1/2 w-full -translate-x-1/2 rounded-full bg-[#E5005B]/10 blur-[200px]" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
             <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 bg-[#E5005B]/10 text-[#E5005B] border-[#E5005B]/20">
-                <Award className="w-3.5 h-3.5 mr-1.5" />
+              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
+                <Award className="mr-1.5 h-3.5 w-3.5" />
                 Partnerships
               </Badge>
             </motion.div>
 
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             >
               Become a <span className="text-gradient">Sponsor</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-white/70 leading-relaxed max-w-3xl mx-auto"
+              className="mx-auto max-w-3xl text-xl leading-relaxed text-white/70"
             >
-              Partner with HAN Competitive Robotics and support the next
-              generation of engineering talent. Your sponsorship helps us build
-              competitive combat robots and provides valuable opportunities for
-              HAN University students.
+              Partner with HAN Competitive Robotics and support the next generation of engineering
+              talent. Your sponsorship helps us build competitive combat robots and provides
+              valuable opportunities for HAN University students.
             </motion.p>
 
-            <motion.div
-              variants={fadeInUp}
-              className="mt-10"
-            >
+            <motion.div variants={fadeInUp} className="mt-10">
               <Link href="#contact">
                 <Button
                   size="lg"
-                  className="bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold px-10 py-6 text-lg"
+                  className="bg-[#E5005B] px-10 py-6 text-lg font-semibold text-white hover:bg-[#E5005B]/90"
                 >
                   Become a Sponsor
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </motion.div>
@@ -175,28 +165,28 @@ export default function SponsorsPage() {
       </section>
 
       {/* Why Sponsor Section */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
               Why Partner With Us
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Why <span className="text-gradient">Sponsor HCR?</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              Partnering with HCR offers unique benefits for companies looking to
-              connect with engineering talent and support student innovation.
+            <p className="text-lg text-white/60">
+              Partnering with HCR offers unique benefits for companies looking to connect with
+              engineering talent and support student innovation.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -205,17 +195,13 @@ export default function SponsorsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-[#141414] border-white/10 h-full hover:border-[#E5005B]/30 transition-all duration-300 group">
+                <Card className="group h-full border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
                   <CardContent className="p-8">
-                    <div className="w-14 h-14 rounded-xl bg-[#E5005B]/10 flex items-center justify-center mb-6 group-hover:bg-[#E5005B]/20 transition-colors">
-                      <benefit.icon className="w-7 h-7 text-[#E5005B]" />
+                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#E5005B]/10 transition-colors group-hover:bg-[#E5005B]/20">
+                      <benefit.icon className="h-7 w-7 text-[#E5005B]" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-white/60 leading-relaxed">
-                      {benefit.description}
-                    </p>
+                    <h3 className="mb-3 text-xl font-bold text-white">{benefit.title}</h3>
+                    <p className="leading-relaxed text-white/60">{benefit.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -225,28 +211,28 @@ export default function SponsorsPage() {
       </section>
 
       {/* Sponsor Tiers */}
-      <section className="py-16 bg-[#0a0a0a]">
+      <section className="bg-[#0a0a0a] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
               Sponsorship Packages
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Sponsor <span className="text-gradient">Tiers</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              Choose a sponsorship package that aligns with your goals and budget.
-              All contributions directly support our team&apos;s engineering efforts.
+            <p className="text-lg text-white/60">
+              Choose a sponsorship package that aligns with your goals and budget. All contributions
+              directly support our team&apos;s engineering efforts.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {sponsorTiers.map((tier, index) => {
               const Icon = tier.icon;
               return (
@@ -258,46 +244,42 @@ export default function SponsorsPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card
-                    className={`bg-[#141414] border-white/10 h-full flex flex-col ${
+                    className={`flex h-full flex-col border-white/10 bg-[#141414] ${
                       tier.name === "Platinum"
                         ? "border-purple-500/30 ring-1 ring-purple-500/20"
                         : tier.name === "Gold"
-                        ? "border-yellow-500/30"
-                        : tier.name === "Silver"
-                        ? "border-gray-500/30"
-                        : "border-[#E5005B]/30"
+                          ? "border-yellow-500/30"
+                          : tier.name === "Silver"
+                            ? "border-gray-500/30"
+                            : "border-[#E5005B]/30"
                     }`}
                   >
                     <CardHeader className="pb-4">
                       <div
-                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${tier.color} flex items-center justify-center mb-4`}
+                        className={`h-12 w-12 rounded-lg bg-gradient-to-br ${tier.color} mb-4 flex items-center justify-center`}
                       >
-                        <Icon className="w-6 h-6 text-white" />
+                        <Icon className="h-6 w-6 text-white" />
                       </div>
-                      <CardTitle className="text-2xl font-bold text-white">
-                        {tier.name}
-                      </CardTitle>
-                      <p className="text-3xl font-bold text-gradient mt-2">
-                        {tier.price}
-                      </p>
+                      <CardTitle className="text-2xl font-bold text-white">{tier.name}</CardTitle>
+                      <p className="text-gradient mt-2 text-3xl font-bold">{tier.price}</p>
                     </CardHeader>
                     <CardContent className="flex-1">
-                      <Separator className="bg-white/10 mb-6" />
+                      <Separator className="mb-6 bg-white/10" />
                       <ul className="space-y-3">
                         {tier.features.map((feature) => (
                           <li
                             key={feature}
-                            className="flex items-start gap-3 text-white/70 text-sm"
+                            className="flex items-start gap-3 text-sm text-white/70"
                           >
                             <Check
-                              className={`w-4 h-4 mt-0.5 shrink-0 ${
+                              className={`mt-0.5 h-4 w-4 shrink-0 ${
                                 tier.name === "Platinum"
                                   ? "text-purple-400"
                                   : tier.name === "Gold"
-                                  ? "text-yellow-400"
-                                  : tier.name === "Silver"
-                                  ? "text-gray-400"
-                                  : "text-[#E5005B]"
+                                    ? "text-yellow-400"
+                                    : tier.name === "Silver"
+                                      ? "text-gray-400"
+                                      : "text-[#E5005B]"
                               }`}
                             />
                             {feature}
@@ -316,35 +298,32 @@ export default function SponsorsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mt-12"
+            className="mt-12 text-center"
           >
-            <p className="text-white/50 text-sm">
-              Custom packages available. Contact us to discuss tailored
-              sponsorship opportunities.
+            <p className="text-sm text-white/50">
+              Custom packages available. Contact us to discuss tailored sponsorship opportunities.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Current Sponsors */}
-      <section className="py-16 bg-[#0f0f0f]">
+      <section className="bg-[#0f0f0f] py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="mx-auto mb-12 max-w-3xl text-center"
           >
-            <Badge className="mb-4 bg-white/5 text-white/70 border-white/10">
-              Our Partners
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Partners</Badge>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Current <span className="text-gradient">Sponsors</span>
             </h2>
             <p className="text-white/60">
-              We&apos;re grateful to these organizations for supporting HCR and
-              making our engineering journey possible.
+              We&apos;re grateful to these organizations for supporting HCR and making our
+              engineering journey possible.
             </p>
           </motion.div>
 
@@ -356,17 +335,19 @@ export default function SponsorsPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-10"
           >
-            <Card className="max-w-xl mx-auto bg-gradient-to-br from-purple-500/10 via-[#141414] to-[#141414] border-purple-500/30">
-              <CardContent className="p-8 flex items-center gap-6">
-                <div className="w-16 h-16 rounded-xl bg-purple-500/20 flex items-center justify-center shrink-0">
-                  <Sparkles className="w-8 h-8 text-purple-400" />
+            <Card className="mx-auto max-w-xl border-purple-500/30 bg-gradient-to-br from-purple-500/10 via-[#141414] to-[#141414]">
+              <CardContent className="flex items-center gap-6 p-8">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-purple-500/20">
+                  <Sparkles className="h-8 w-8 text-purple-400" />
                 </div>
                 <div>
-                  <Badge className="mb-2 bg-purple-500/10 text-purple-400 border-purple-500/30">
+                  <Badge className="mb-2 border-purple-500/30 bg-purple-500/10 text-purple-400">
                     Platinum Sponsor
                   </Badge>
-                  <h3 className="text-xl font-bold text-white">HAN University of Applied Sciences</h3>
-                  <p className="text-white/50 text-sm mt-1">Official educational partner</p>
+                  <h3 className="text-xl font-bold text-white">
+                    HAN University of Applied Sciences
+                  </h3>
+                  <p className="mt-1 text-sm text-white/50">Official educational partner</p>
                 </div>
               </CardContent>
             </Card>
@@ -378,33 +359,33 @@ export default function SponsorsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto"
+            className="mx-auto grid max-w-3xl grid-cols-1 gap-4 md:grid-cols-3"
           >
-            <Card className="bg-[#141414] border-yellow-500/20">
+            <Card className="border-yellow-500/20 bg-[#141414]">
               <CardContent className="p-5">
-                <div className="flex items-center gap-3 mb-3">
-                  <Medal className="w-5 h-5 text-yellow-500" />
+                <div className="mb-3 flex items-center gap-3">
+                  <Medal className="h-5 w-5 text-yellow-500" />
                   <span className="font-semibold text-white">Gold</span>
                 </div>
-                <p className="text-white/50 text-sm">2 sponsors</p>
+                <p className="text-sm text-white/50">2 sponsors</p>
               </CardContent>
             </Card>
-            <Card className="bg-[#141414] border-gray-500/20">
+            <Card className="border-gray-500/20 bg-[#141414]">
               <CardContent className="p-5">
-                <div className="flex items-center gap-3 mb-3">
-                  <Star className="w-5 h-5 text-gray-400" />
+                <div className="mb-3 flex items-center gap-3">
+                  <Star className="h-5 w-5 text-gray-400" />
                   <span className="font-semibold text-white">Silver</span>
                 </div>
-                <p className="text-white/50 text-sm">3 sponsors</p>
+                <p className="text-sm text-white/50">3 sponsors</p>
               </CardContent>
             </Card>
-            <Card className="bg-[#141414] border-[#E5005B]/20">
+            <Card className="border-[#E5005B]/20 bg-[#141414]">
               <CardContent className="p-5">
-                <div className="flex items-center gap-3 mb-3">
-                  <Zap className="w-5 h-5 text-[#E5005B]" />
+                <div className="mb-3 flex items-center gap-3">
+                  <Zap className="h-5 w-5 text-[#E5005B]" />
                   <span className="font-semibold text-white">Supporters</span>
                 </div>
-                <p className="text-white/50 text-sm">2 supporters</p>
+                <p className="text-sm text-white/50">2 supporters</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -412,45 +393,42 @@ export default function SponsorsPage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5">
+      <section
+        id="contact"
+        className="bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-20"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="mx-auto max-w-4xl"
           >
-            <Card className="bg-[#141414] border-white/10 overflow-hidden">
+            <Card className="overflow-hidden border-white/10 bg-[#141414]">
               <CardContent className="p-8 sm:p-12">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid items-center gap-12 md:grid-cols-2">
                   <div>
-                    <Badge className="mb-4 bg-[#E5005B]/10 text-[#E5005B] border-[#E5005B]/20">
+                    <Badge className="mb-4 border-[#E5005B]/20 bg-[#E5005B]/10 text-[#E5005B]">
                       Get in Touch
                     </Badge>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                    <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                       Ready to <span className="text-gradient">Partner?</span>
                     </h2>
-                    <p className="text-white/60 mb-6">
-                      Contact our sponsorship team to discuss how we can work
-                      together. We&apos;re happy to create custom packages that meet
-                      your needs.
+                    <p className="mb-6 text-white/60">
+                      Contact our sponsorship team to discuss how we can work together. We&apos;re
+                      happy to create custom packages that meet your needs.
                     </p>
                     <div className="space-y-3">
                       <p className="text-white/70">
-                        <span className="text-white font-medium">Email:</span>{" "}
-                        <a
-                          href="mailto:hcr@han.nl"
-                          className="text-[#E5005B] hover:underline"
-                        >
+                        <span className="font-medium text-white">Email:</span>{" "}
+                        <a href="mailto:hcr@han.nl" className="text-[#E5005B] hover:underline">
                           hcr@han.nl
                         </a>
                       </p>
                       <p className="text-white/70">
-                        <span className="text-white font-medium">
-                          Response time:
-                        </span>{" "}
-                        Within 48 hours
+                        <span className="font-medium text-white">Response time:</span> Within 48
+                        hours
                       </p>
                     </div>
                   </div>
@@ -458,21 +436,17 @@ export default function SponsorsPage() {
                     <Link href="/contact">
                       <Button
                         size="lg"
-                        className="w-full bg-[#E5005B] hover:bg-[#E5005B]/90 text-white font-semibold py-6"
+                        className="w-full bg-[#E5005B] py-6 font-semibold text-white hover:bg-[#E5005B]/90"
                       >
                         Contact Sponsorship Team
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
-                    <a
-                      href="/sponsorship-prospectus.pdf"
-                      download
-                      className="w-full"
-                    >
+                    <a href="/sponsorship-prospectus.pdf" download className="w-full">
                       <Button
                         size="lg"
                         variant="outline"
-                        className="w-full border-white/20 text-white hover:bg-white/10 py-6"
+                        className="w-full border-white/20 py-6 text-white hover:bg-white/10"
                       >
                         Download Prospectus
                       </Button>

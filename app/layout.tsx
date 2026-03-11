@@ -82,7 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} font-sans antialiased bg-[#121212] text-foreground min-h-screen`}
+        className={`${inter.variable} text-foreground min-h-screen bg-[#121212] font-sans antialiased`}
       >
         <Navbar />
         <main>{children}</main>
