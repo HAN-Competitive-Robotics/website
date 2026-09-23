@@ -1,514 +1,247 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Zap, Cpu, Wrench, ChevronRight } from "lucide-react";
+import { ArrowRight, Wrench, Zap, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-
-// Animation variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-  },
-};
-
-const divisions = [
-  {
-    icon: Wrench,
-    title: "Mechanical Engineering",
-    description:
-      "CAD design, structural analysis, and manufacturing of robot chassis and kinetic systems.",
-  },
-  {
-    icon: Zap,
-    title: "Electrical Engineering",
-    description:
-      "Power distribution, motor control, wiring, and electrical safety systems.",
-  },
-  {
-    icon: Cpu,
-    title: "Embedded Systems",
-    description:
-      "Custom PCB design, firmware development, and real time control systems for robotics.",
-  },
-
-];
-
-const updates = [
-  {
-    date: "March 2026",
-    title: "HCR-1 Design Complete",
-    excerpt:
-      "Our first featherweight robot design is finalized. Manufacturing starts next month.",
-    category: "Development",
-  },
-  {
-    date: "February 2026",
-    title: "New Team Members Joined",
-    excerpt:
-      "Welcome to our new mechanical and embedded systems engineers for the 2026 season.",
-    category: "Team",
-  },
-  {
-    date: "January 2026",
-    title: "Sponsorship Goals Met",
-    excerpt:
-      "Thanks to our sponsors, we have funding for our first competition season.",
-    category: "Sponsors",
-  },
-];
-
-const sponsors = [
-  { name: "HAN University", tier: "Platinum", logo: "/sponsors/han-platinum.svg" },
-  // Placeholders for future sponsors:
-  // { name: "Gold Sponsor 1", tier: "Gold", logo: "" },
-  // { name: "Gold Sponsor 2", tier: "Gold", logo: "" },
-  // { name: "Silver Sponsor 1", tier: "Silver", logo: "" },
-  // { name: "Silver Sponsor 2", tier: "Silver", logo: "" },
-  // { name: "Supporter 1", tier: "Supporter", logo: "" },
-];
+import { useEffect } from "react";
 
 export default function HomePage() {
+  // Setup reveal observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.14 }
+    );
+
+    document.querySelectorAll("[data-reveal]").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Hero Section */}
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
-        {/* Background Elements */}
-        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
-        <div className="blur-glow absolute top-1/4 right-0 h-1/2 w-1/2 rounded-full bg-[#E5005B]/10 blur-[150px]" />
-        <div className="absolute bottom-0 left-0 h-1/3 w-1/3 rounded-full bg-[#E5005B]/5 blur-[100px]" />
-
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-            className="max-w-4xl"
-          >
-            {/* Badge */}
-            <motion.div variants={fadeInUp}>
-              <Badge className="mb-6 border-[#E5005B]/20 bg-[#E5005B]/10 px-4 py-1.5 text-sm text-[#E5005B] hover:bg-[#E5005B]/20">
-                <Zap className="mr-1.5 h-3.5 w-3.5" />
-                HAN
-              </Badge>
-            </motion.div>
-
-            {/* Main Title */}
-            <motion.h1
-              variants={fadeInUp}
-              className="mb-6 text-5xl leading-tight font-bold text-white sm:text-6xl lg:text-7xl"
-            >
-              HAN Competitive <span className="text-gradient">Robotics</span>
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              variants={fadeInUp}
-              className="mb-8 max-w-2xl text-xl text-white/70 sm:text-2xl"
-            >
-              Building robots for European competitions. Made by students, powered by passion.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div variants={fadeInUp} className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/team">
-                <Button
-                  size="lg"
-                  className="group bg-[#E5005B] px-8 py-6 text-base font-semibold text-white hover:bg-[#E5005B]/90"
-                >
-                  Meet the Team
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-              <Link href="/robot">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white/20 px-8 py-6 text-base font-semibold text-white hover:bg-white/10"
-                >
-                  Our Robot
-                </Button>
-              </Link>
-              <Link href="/sponsors">
-                <Button
-                  size="lg"
-                  variant="ghost"
-                  className="px-8 py-6 text-base font-semibold text-white/70 hover:bg-white/5 hover:text-white"
-                >
-                  Become a Sponsor
-                </Button>
-              </Link>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              variants={fadeInUp}
-              className="mt-16 grid max-w-xl grid-cols-3 gap-8 border-t border-white/10 pt-8"
-            >
-              <div>
-                <div className="text-3xl font-bold text-white sm:text-4xl">13.6</div>
-                <div className="mt-1 text-sm text-white/50">kg Weight Class</div>
+    <div className="flex flex-col">
+      {/* 1. Hero Band */}
+      <section className="border-b border-line-strong relative overflow-hidden bg-background">
+        <div className="mx-auto max-w-7xl border-x border-border px-5 sm:px-8">
+          <div className="grid lg:grid-cols-[1fr_19rem] gap-16 min-h-[calc(100vh-80px)] py-16">
+            
+            {/* Left Column (Content) */}
+            <div className="flex flex-col justify-center animate-rise [animation-delay:0ms] relative z-10">
+              <div className="flex items-center gap-4 text-[10px] tracking-widest font-mono uppercase mb-8">
+                <span className="w-8 h-px bg-primary"></span>
+                <span className="text-foreground">HAN University of Applied Sciences</span>
+                <span className="text-primary font-bold">Featherweight</span>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-white sm:text-4xl">10</div>
-                <div className="mt-1 text-sm text-white/50">Team Members</div>
+              
+              <h1 className="font-display text-[clamp(4.6rem,13vw,10.5rem)] leading-[0.76] uppercase font-bold text-foreground mb-12">
+                <span className="text-primary block mb-2">HAN</span>
+                <span className="block mb-2">Competitive</span>
+                <span className="block">Robotics</span>
+              </h1>
+              
+              <div className="border-l-[3px] border-primary pl-6 py-1 max-w-xl mb-12">
+                <p className="font-sans text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  Building robots for European competitions. Made by students, powered by passion and precise engineering.
+                </p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-white sm:text-4xl">2025</div>
-                <div className="mt-1 text-sm text-white/50">Founded</div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 animate-rise [animation-delay:100ms]">
+                <Link href="/team">
+                  <Button size="lg" className="group">
+                    Meet the Team
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+                <Link href="/robot">
+                  <Button variant="outline" size="lg" className="group">
+                    Our Robot
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 opacity-100" />
+                  </Button>
+                </Link>
               </div>
-            </motion.div>
-          </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/20 p-1.5">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="h-1.5 w-1.5 rounded-full bg-[#E5005B]"
-            />
-          </div>
-        </motion.div>
-      </section>
-
-      {/* What is HCR Section */}
-      <section className="relative bg-[#0a0a0a] py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"
-          >
-            {/* Content */}
-            <div>
-              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">About Us</Badge>
-              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-                What is <span className="text-gradient">HCR?</span>
-              </h2>
-              <p className="mb-6 text-lg leading-relaxed text-white/70">
-                HAN Competitive Robotics (HCR) is a student team at HAN University in the Netherlands. 
-                We design, build, and compete with featherweight robots in European robotics events.
-              </p>
-              <p className="mb-8 leading-relaxed text-white/60">
-                Our team brings together students from engineering programs including Embedded Systems 
-                and Mechanical Engineering. Together we work on real projects and develop practical skills.
-              </p>
-              <Link href="/about">
-                <Button
-                  variant="outline"
-                  className="group border-white/20 text-white hover:bg-white/10"
-                >
-                  Learn More About Us
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
             </div>
 
-            {/* Image/Visual */}
-            <div className="relative">
-              <div className="relative aspect-square overflow-hidden rounded-2xl">
-                <img
-                  src="/robot/workshop.jpg"
-                  alt="Team working on robot"
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/80 to-transparent" />
-                <div className="absolute right-4 bottom-4 left-4">
-                  <p className="text-sm text-white/80">Team HCR at work</p>
+            {/* Right Column (Spec, Desktop Only) */}
+            <div className="hidden lg:flex flex-col justify-center border-l border-border pl-16 relative overflow-hidden">
+              <div className="absolute inset-0 z-0 opacity-[0.25] mix-blend-screen bg-center bg-cover" style={{ backgroundImage: 'url(/robot/cad-design.jpg)' }}></div>
+              <div className="absolute inset-0 z-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              
+              <div className="relative z-10 animate-rise [animation-delay:200ms]">
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="font-display text-7xl font-bold text-foreground leading-none">13.6</span>
+                  <span className="font-mono text-primary text-xl font-bold tracking-widest">KG</span>
+                </div>
+                <div className="w-16 h-px bg-line-strong mb-4"></div>
+                <p className="font-mono text-[10px] tracking-widest uppercase text-muted-foreground leading-loose">
+                  Built by students.<br />Engineered for impact.
+                </p>
+                
+                <div className="mt-12 text-primary">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 0L40 40H0" stroke="currentColor" strokeWidth="2" fill="none" />
+                    <path d="M0 0L40 40" stroke="currentColor" strokeWidth="2" />
+                  </svg>
                 </div>
               </div>
+
+              {/* Hazard stripes strip */}
+              <div className="absolute right-[-2rem] top-0 bottom-0 w-16 industrial-stripes opacity-60 z-10"></div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* What We Build Section */}
-      <section className="relative overflow-hidden bg-[#0f0f0f] py-16">
-        <div className="bg-grid-pattern-light absolute inset-0 opacity-50" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto mb-16 max-w-3xl text-center"
-          >
-            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Work</Badge>
-            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              What We <span className="text-gradient">Build</span>
-            </h2>
-            <p className="text-lg text-white/60">
-              From concept to competition ready machine, we engineer every part of our robots at HAN.
-            </p>
-          </motion.div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Competition Robots",
-                description:
-                  "Featherweight robots built for durability, power, and competitive performance.",
-              },
-              {
-                title: "Custom Electronics",
-                description:
-                  "Control systems, motor drivers, and power management for demanding conditions.",
-              },
-              {
-                title: "Kinetic Systems",
-                description:
-                  "High energy kinetic systems including drums, spinners, and hammers for competitive use.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="h-full border-white/10 bg-[#141414] transition-colors duration-300 hover:border-[#E5005B]/30">
-                  <CardContent className="p-8">
-                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-[#E5005B]/10">
-                      <span className="text-2xl font-bold text-[#E5005B]">0{index + 1}</span>
-                    </div>
-                    <h3 className="mb-3 text-xl font-bold text-white">{item.title}</h3>
-                    <p className="leading-relaxed text-white/60">{item.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Engineering Divisions */}
-      <section className="relative bg-[#0a0a0a] py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto mb-16 max-w-3xl text-center"
-          >
-            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Team Structure</Badge>
-            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              Engineering <span className="text-gradient">Divisions</span>
-            </h2>
-            <p className="text-lg text-white/60">
-              Our team is organized into divisions, each focusing on key parts of robot development.
-            </p>
-          </motion.div>
+      {/* 2. Divisions Band (surface-deep) */}
+      <section className="border-b border-border bg-surface-deep">
+        <div className="mx-auto max-w-7xl border-x border-border px-5 sm:px-8 py-24">
+          <div className="reveal-section" data-reveal>
+            {/* Section Heading */}
+            <div className="grid md:grid-cols-[10rem_1fr] gap-12 items-end mb-16">
+              <div className="flex flex-col">
+                <span className="font-mono text-[10px] tracking-widest text-primary uppercase">01 / Core disciplines</span>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="font-display text-5xl md:text-7xl uppercase font-bold text-foreground leading-[0.9]">
+                  Divisions
+                </h2>
+              </div>
+            </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {divisions.map((division, index) => (
-              <motion.div
-                key={division.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="group h-full border-white/10 bg-[#141414] transition-all duration-300 hover:border-[#E5005B]/30">
-                  <CardContent className="p-8">
-                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#E5005B]/20 to-[#E5005B]/5 transition-all duration-300 group-hover:from-[#E5005B]/30 group-hover:to-[#E5005B]/10">
-                      <division.icon className="h-7 w-7 text-[#E5005B]" />
+            {/* 3-column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 border-l border-t border-border">
+              {[
+                {
+                  num: "01",
+                  title: "Mechanical",
+                  desc: "CAD design, structural analysis, and manufacturing of robot chassis and kinetic systems.",
+                  icon: Wrench
+                },
+                {
+                  num: "02",
+                  title: "Electrical",
+                  desc: "Power distribution, motor control, wiring, and electrical safety systems.",
+                  icon: Zap
+                },
+                {
+                  num: "03",
+                  title: "Embedded",
+                  desc: "Custom PCB design, firmware development, and real time control systems for robotics.",
+                  icon: Cpu
+                }
+              ].map((div, i) => (
+                <div key={i} className="group border-r border-b border-border p-8 min-h-[20rem] flex flex-col bg-card hover:bg-accent transition-colors duration-300">
+                  <div className="flex justify-between items-start mb-12">
+                    <div className="text-primary group-hover:text-primary-foreground transition-colors">
+                      <div.icon strokeWidth={1.5} size={32} />
                     </div>
-                    <h3 className="mb-3 text-xl font-bold text-white">{division.title}</h3>
-                    <p className="leading-relaxed text-white/60">{division.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                    <span className="font-mono text-[10px] tracking-widest text-muted-foreground group-hover:text-foreground/70 transition-colors">
+                      {div.num}
+                    </span>
+                  </div>
+                  <div className="mt-auto">
+                    <h3 className="font-display text-3xl uppercase font-bold text-foreground mb-4 leading-none">
+                      {div.title}
+                    </h3>
+                    <p className="font-sans text-sm text-muted-foreground group-hover:text-foreground/90 transition-colors leading-relaxed">
+                      {div.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Latest Updates */}
-      <section className="relative bg-[#0f0f0f] py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between"
-          >
-            <div>
-              <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">
-                News & Updates
-              </Badge>
-              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-                Latest <span className="text-gradient">Updates</span>
+      {/* 3. Updates Band (base) */}
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-7xl border-x border-border px-5 sm:px-8 py-24">
+          <div className="reveal-section" data-reveal>
+            {/* Section Heading */}
+            <div className="grid md:grid-cols-[10rem_1fr] gap-12 items-end mb-16">
+              <div className="flex flex-col">
+                <span className="font-mono text-[10px] tracking-widest text-primary uppercase">02 / Log</span>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="font-display text-5xl md:text-7xl uppercase font-bold text-foreground leading-[0.9]">
+                  Updates
+                </h2>
+              </div>
+            </div>
+
+            <div className="border-t-[3px] border-line-strong">
+              {[
+                {
+                  date: "2026.03.14",
+                  title: "HCR-1 Design Complete",
+                  desc: "Our first featherweight robot design is finalized. Manufacturing starts next month.",
+                  category: "Development"
+                },
+                {
+                  date: "2026.02.28",
+                  title: "New Team Members Joined",
+                  desc: "Welcome to our new mechanical and embedded systems engineers for the 2026 season.",
+                  category: "Team"
+                },
+                {
+                  date: "2026.01.15",
+                  title: "Sponsorship Goals Met",
+                  desc: "Thanks to our sponsors, we have funding for our first competition season.",
+                  category: "Sponsors"
+                }
+              ].map((update, i) => (
+                <div key={i} className="flex flex-col md:flex-row md:items-center py-6 border-b border-border gap-6 md:gap-8 hover:bg-accent/30 transition-colors">
+                  <div className="font-mono text-[10px] tracking-widest text-primary md:w-[10rem] shrink-0">
+                    {update.date}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-display text-2xl uppercase font-bold text-foreground mb-1">
+                      {update.title}
+                    </h3>
+                    <p className="font-sans text-sm text-muted-foreground">
+                      {update.desc}
+                    </p>
+                  </div>
+                  <div className="font-mono text-[10px] tracking-widest border border-border px-3 py-1 rounded text-foreground uppercase whitespace-nowrap shrink-0">
+                    {update.category}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Team Band (surface-raised) */}
+      <section className="bg-surface-raised border-b border-border">
+        <div className="mx-auto max-w-7xl border-x border-border px-5 sm:px-8 py-24">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 reveal-section" data-reveal>
+            <div className="flex flex-col">
+              <span className="font-mono text-[10px] tracking-widest text-primary uppercase mb-4">03 / The crew</span>
+              <h2 className="font-display text-5xl md:text-7xl uppercase font-bold text-foreground leading-[0.9]">
+                Meet the Team
               </h2>
             </div>
-            <Link href="#" className="mt-4 sm:mt-0">
-              <Button
-                variant="ghost"
-                className="group text-[#E5005B] hover:bg-[#E5005B]/10 hover:text-[#E5005B]/80"
-              >
-                View All Updates
+            
+            <Link href="/team">
+              <Button variant="outline" className="group">
+                View our team
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-          </motion.div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {updates.map((update, index) => (
-              <motion.div
-                key={update.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="group h-full cursor-pointer border-white/10 bg-[#141414] transition-all duration-300 hover:border-white/20">
-                  <CardContent className="p-6">
-                    <div className="mb-4 flex items-center gap-3">
-                      <Badge variant="outline" className="border-[#E5005B]/30 text-[#E5005B]">
-                        {update.category}
-                      </Badge>
-                      <span className="text-sm text-white/40">{update.date}</span>
-                    </div>
-                    <h3 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-[#E5005B]">
-                      {update.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-white/60">{update.excerpt}</p>
-                    <div className="mt-4 flex items-center text-sm font-medium text-[#E5005B]">
-                      Read More
-                      <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
-
-      {/* Sponsors Section */}
-      <section className="relative bg-[#0a0a0a] py-16">
-        <div className="bg-grid-pattern absolute inset-0 opacity-20" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto mb-16 max-w-3xl text-center"
-          >
-            <Badge className="mb-4 border-white/10 bg-white/5 text-white/70">Our Partners</Badge>
-            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              Proudly Supported <span className="text-gradient">By</span>
-            </h2>
-            <p className="text-lg text-white/60">
-              Our sponsors make it possible to build robots and represent HAN at European competitions.
-            </p>
-          </motion.div>
-
-          {/* Sponsor Logos Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6"
-          >
-            {sponsors.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="group flex aspect-[3/2] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#1A1A1A] transition-all duration-300 hover:border-[#E5005B]/30"
-              >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-              </div>
-            ))}
-          </motion.div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center"
-          >
-            <Link href="/sponsors">
-              <Button
-                size="lg"
-                className="bg-[#E5005B] px-8 font-semibold text-white hover:bg-[#E5005B]/90"
-              >
-                Become a Sponsor
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Learn More CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#E5005B]/10 via-transparent to-[#E5005B]/5 py-20">
-        <div className="bg-grid-pattern absolute inset-0 opacity-30" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
-          >
-            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              Interested in <span className="text-gradient">Robotics?</span>
-            </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">
-              Learn more about HAN Competitive Robotics and how we are building robots at HAN University.
-            </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Link href="/about">
-                <Button
-                  size="lg"
-                  className="bg-[#E5005B] px-8 py-6 text-base font-semibold text-white hover:bg-[#E5005B]/90"
-                >
-                  Learn More About Us
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white/20 px-8 py-6 text-base font-semibold text-white hover:bg-white/10"
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   );
 }

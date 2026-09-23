@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow_Condensed, Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["700"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -82,10 +96,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} text-foreground min-h-screen bg-[#121212] font-sans antialiased`}
+        className={`${barlowCondensed.variable} ${manrope.variable} ${ibmPlexMono.variable} text-foreground min-h-screen bg-background font-sans antialiased`}
       >
         <Navbar />
         <main>{children}</main>
+        {/* We will replace the default Footer or override its style in its component, but we can just use the provided one for now or rewrite it later if needed. */}
         <Footer />
       </body>
     </html>
