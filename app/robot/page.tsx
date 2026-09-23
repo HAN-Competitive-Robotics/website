@@ -170,17 +170,14 @@ export default function RobotPage() {
               transition={{ duration: 0.6 }}
               className="relative order-2 lg:order-1"
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-black">
                 <img
                   src="/robot/cad-design.jpg"
                   alt="HCR-1 Battlebot"
-                  className="h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/80 to-transparent pointer-events-none" />
                 {/* Technical overlay elements */}
-                <div className="absolute top-4 left-4 rounded-full border border-white/10 bg-black/50 px-3 py-1">
-                  <span className="font-mono text-xs text-white/60">v1.0.0</span>
-                </div>
                 <div className="absolute right-4 bottom-4 rounded-full border border-white/10 bg-black/50 px-3 py-1">
                   <span className="font-mono text-xs text-[#E5005B]">FEATHERWEIGHT</span>
                 </div>
