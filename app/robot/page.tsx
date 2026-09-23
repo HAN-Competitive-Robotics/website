@@ -172,7 +172,7 @@ export default function RobotPage() {
             >
               <div className="relative aspect-square overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1563178406-4f8025767818?w=800&h=800&fit=crop"
+                  src="/robot/cad-design.jpg"
                   alt="HCR-1 Battlebot"
                   className="h-full w-full object-cover"
                 />
