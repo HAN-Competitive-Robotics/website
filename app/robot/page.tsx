@@ -172,7 +172,7 @@ export default function RobotPage() {
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-black">
                 <img
-                  src="/robot/cad-design.jpg"
+                  src="/robot/hcr-1.jpg"
                   alt="HCR-1 Battlebot"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
